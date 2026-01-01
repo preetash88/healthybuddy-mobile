@@ -1,4 +1,6 @@
-import { useLocalSearchParams, router } from 'expo-router';
+import { useLocalSearchParams, router, useFocusEffect } from 'expo-router';
+import { useCallback } from 'react';
+
 import { useState } from 'react';
 import {
     View,
@@ -10,7 +12,6 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import assessments from '@/data/assessments.json';
-import fullWindowOverlay from "react-native-screens/src/components/FullWindowOverlay";
 
 export default function AssessmentScreen() {
     const { disease } = useLocalSearchParams<{ disease: string }>();
@@ -52,7 +53,7 @@ export default function AssessmentScreen() {
             );
 
             setTimeout(() => {
-                router.push({
+                router.replace({
                     pathname: '/assessment-result',
                     params: {
                         disease: decodedDisease,
@@ -64,6 +65,19 @@ export default function AssessmentScreen() {
             setCurrentQuestion((q) => q + 1);
         }
     };
+
+    useFocusEffect(
+        useCallback(() => {
+            // Screen focused → do nothing
+            return () => {
+                // Screen unfocused → RESET EVERYTHING
+                setCurrentQuestion(0);
+                setAnswers(Array(QUESTIONS.length).fill(null));
+                setIsSubmitting(false);
+            };
+        }, [])
+    );
+
 
     const handlePrevious = () => {
         if (currentQuestion > 0) {

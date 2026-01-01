@@ -97,7 +97,7 @@ export default function SymptomChecker() {
             <View style={styles.inner}>
                 {/* Icon */}
                 <View style={styles.iconWrap}>
-                    <MaterialCommunityIcons name="activity" size={30} color="white" />
+                    <MaterialCommunityIcons name="pulse" size={30} color="white" />
                 </View>
 
                 {/* Heading */}
