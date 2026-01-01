@@ -1,0 +1,3415 @@
+{
+  "Heart Attack (Myocardial Infarction)": {
+    "risk_thresholds": { "low": 0, "moderate": 15, "high": 30 },
+    "questions": [
+      {
+        "question": "Are you experiencing chest pain or discomfort?",
+        "options": [
+          { "text": "Severe crushing pain", "score": 10 },
+          { "text": "Moderate pressure", "score": 6 },
+          { "text": "Mild discomfort", "score": 3 },
+          { "text": "No pain", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is the pain spreading to your arm, neck, or jaw?",
+        "options": [
+          { "text": "Yes, clearly", "score": 8 },
+          { "text": "Slightly", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel shortness of breath?",
+        "options": [
+          { "text": "Severe", "score": 8 },
+          { "text": "Moderate", "score": 5 },
+          { "text": "Mild", "score": 2 },
+          { "text": "None", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel nauseous or have cold sweats?",
+        "options": [
+          { "text": "Yes, both", "score": 6 },
+          { "text": "One of them", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of heart disease or high blood pressure?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ]
+  },
+  "Cardiac Arrest": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 20
+    },
+    "questions": [
+      {
+        "question": "Have you experienced sudden collapse or loss of consciousness?",
+        "options": [
+          { "text": "Yes, suddenly", "score": 10 },
+          { "text": "Brief dizziness only", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did the episode involve no breathing or gasping?",
+        "options": [
+          { "text": "Yes", "score": 10 },
+          { "text": "Uncertain", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a known history of heart rhythm problems?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had a previous heart attack?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did this event occur during physical exertion?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Maintain regular cardiac checkups"],
+      "moderate": ["Seek urgent cardiac evaluation"],
+      "high": ["Call emergency services immediately"]
+    }
+  },
+
+  "Heart Failure": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 20
+    },
+    "questions": [
+      {
+        "question": "Do you experience shortness of breath during routine activities?",
+        "options": [
+          { "text": "Often", "score": 6 },
+          { "text": "Sometimes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel breathless when lying flat?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Occasionally", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed swelling in your legs or ankles?",
+        "options": [
+          { "text": "Significant swelling", "score": 5 },
+          { "text": "Mild swelling", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel unusually fatigued most days?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Sometimes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of heart disease or hypertension?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Continue heart-healthy habits"],
+      "moderate": ["Schedule a cardiology consultation"],
+      "high": ["Seek urgent medical evaluation"]
+    }
+  },
+
+  "Hypertension": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 15
+    },
+    "questions": [
+      {
+        "question": "Have you been told you have high blood pressure before?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience frequent headaches or dizziness?",
+        "options": [
+          { "text": "Often", "score": 4 },
+          { "text": "Sometimes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you consume a high-salt or processed-food diet?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a family history of high blood pressure?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you exercise less than 3 times a week?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Maintain healthy lifestyle"],
+      "moderate": ["Monitor blood pressure regularly"],
+      "high": ["Consult a healthcare provider"]
+    }
+  },
+
+  "Coronary Artery Disease": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 12,
+      "high": 24
+    },
+    "questions": [
+      {
+        "question": "Do you experience chest discomfort during physical activity?",
+        "options": [
+          { "text": "Yes", "score": 8 },
+          { "text": "Occasionally", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does the discomfort improve with rest?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have high cholesterol?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you smoke or have you smoked previously?",
+        "options": [
+          { "text": "Current smoker", "score": 5 },
+          { "text": "Former smoker", "score": 3 },
+          { "text": "Never", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have diabetes?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Maintain heart-healthy lifestyle"],
+      "moderate": ["Consult a cardiologist"],
+      "high": ["Seek urgent cardiac evaluation"]
+    }
+  },
+
+  "Lung Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 20
+    },
+    "questions": [
+      {
+        "question": "Do you have a persistent cough lasting more than 3 weeks?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Occasionally", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you coughed up blood?",
+        "options": [
+          { "text": "Yes", "score": 10 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you currently smoke or have a long smoking history?",
+        "options": [
+          { "text": "Current smoker", "score": 6 },
+          { "text": "Former smoker", "score": 3 },
+          { "text": "Never", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have persistent chest pain?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Avoid smoking and monitor symptoms"],
+      "moderate": ["Schedule a medical evaluation"],
+      "high": ["Seek urgent diagnostic assessment"]
+    }
+  },
+
+  "Asthma": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Do you experience wheezing or whistling sounds while breathing?",
+        "options": [
+          { "text": "Frequently", "score": 5 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel shortness of breath during exercise or at night?",
+        "options": [
+          { "text": "Yes, often", "score": 5 },
+          { "text": "Sometimes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do your symptoms worsen with allergens, dust, or cold air?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a personal or family history of asthma or allergies?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you needed an inhaler or urgent care for breathing issues?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Avoid known triggers"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+
+  "Bronchitis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 15
+    },
+    "questions": [
+      {
+        "question": "Have you had a cough lasting more than 2 weeks?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Less than 2 weeks", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you coughing up mucus or phlegm?",
+        "options": [
+          { "text": "Yes, frequently", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience chest tightness or discomfort?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had a recent cold or respiratory infection?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you smoke or are you exposed to air pollution?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Rest and hydration"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Pneumonia": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 12,
+      "high": 22
+    },
+    "questions": [
+      {
+        "question": "Do you have a high fever with chills?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Mild fever", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you experiencing chest pain while breathing or coughing?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Mild discomfort", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have shortness of breath at rest?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Only with activity", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you coughing up yellow, green, or bloody mucus?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you over 65 or immunocompromised?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms closely"],
+      "moderate": ["Seek prompt medical care"],
+      "high": ["Seek emergency medical attention"]
+    }
+  },
+
+  "Sinusitis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you have facial pain or pressure around the nose or eyes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have nasal congestion or blocked nose lasting over 10 days?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Less than 10 days", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have thick yellow or green nasal discharge?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do your symptoms worsen when bending forward?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you recently had a cold or allergies?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Home care and hydration"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical treatment"]
+    }
+  },
+
+  "COPD": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 18
+    },
+    "questions": [
+      {
+        "question": "Do you have chronic cough lasting several months each year?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience breathlessness during daily activities?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Mild", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you smoked for more than 10 years?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Former smoker", "score": 3 },
+          { "text": "Never", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you frequently produce mucus or phlegm?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had frequent respiratory infections?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Avoid smoking and pollutants"],
+      "moderate": ["Consult a pulmonologist"],
+      "high": ["Seek urgent respiratory care"]
+    }
+  },
+
+  "Allergic Rhinitis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you have frequent sneezing, runny or itchy nose?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do your symptoms worsen during certain seasons?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have itchy or watery eyes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a personal or family history of allergies?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do antihistamines improve your symptoms?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Avoid known allergens"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek allergy specialist care"]
+    }
+  },
+
+  "Acid Reflux (GERD)": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 7,
+      "high": 14
+    },
+    "questions": [
+      {
+        "question": "Do you experience burning sensation in the chest after meals?",
+        "options": [
+          { "text": "Frequently", "score": 4 },
+          { "text": "Sometimes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms worsen when lying down?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience sour taste or regurgitation?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you frequently eat large or spicy meals?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for more than 3 months?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Diet and lifestyle modification"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Gastritis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 7,
+      "high": 14
+    },
+    "questions": [
+      {
+        "question": "Do you experience upper abdominal pain or burning?",
+        "options": [
+          { "text": "Frequently", "score": 4 },
+          { "text": "Sometimes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel nauseous or vomit after eating?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you regularly consume alcohol?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you frequently use painkillers (NSAIDs)?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms lasted more than 2 weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Diet modification and rest"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Peptic Ulcer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 18
+    },
+    "questions": [
+      {
+        "question": "Do you experience burning stomach pain that improves or worsens with meals?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed black stools or vomiting blood?",
+        "options": [
+          { "text": "Yes", "score": 10 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you use painkillers frequently?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you smoke or consume alcohol regularly?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+
+  "Irritable Bowel Syndrome (IBS)": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience recurrent abdominal pain?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are your symptoms associated with changes in bowel habits?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms improve after a bowel movement?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms been present for more than 3 months?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do stress or certain foods worsen symptoms?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Diet and lifestyle management"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+  "Constipation": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you have fewer than three bowel movements per week?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you pass hard or difficult-to-pass stools?",
+        "options": [
+          { "text": "Frequently", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel incomplete bowel emptying?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you consume a low-fiber diet or inadequate fluids?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for more than two weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Increase fiber and fluid intake"],
+      "moderate": ["Lifestyle modification advised"],
+      "high": ["Consult a healthcare provider"]
+    }
+  },
+
+  "Stroke": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 20
+    },
+    "questions": [
+      {
+        "question": "Have you experienced sudden weakness or numbness on one side of the body?",
+        "options": [
+          { "text": "Yes", "score": 8 },
+          { "text": "Briefly", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have sudden difficulty speaking or understanding speech?",
+        "options": [
+          { "text": "Yes", "score": 8 },
+          { "text": "Mild difficulty", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced sudden vision loss or blurred vision?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did symptoms begin suddenly?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Gradual onset", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have high blood pressure or diabetes?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Maintain healthy lifestyle"],
+      "moderate": ["Seek urgent medical evaluation"],
+      "high": ["Call emergency services immediately"]
+    }
+  },
+
+  "Migraine": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience recurring throbbing headaches?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are headaches associated with nausea or vomiting?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience sensitivity to light or sound during headaches?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do headaches worsen with physical activity?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do headaches last longer than 4 hours?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor headache triggers"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek neurological evaluation"]
+    }
+  },
+
+  "Epilepsy": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Have you experienced repeated seizure episodes?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Once", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience loss of consciousness during episodes?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have others observed shaking or jerking movements?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience confusion after episodes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of head injury or brain infection?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Consult a neurologist"],
+      "high": ["Seek urgent neurological care"]
+    }
+  },
+
+  "Parkinson’s Disease": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience resting tremors in hands or fingers?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel muscle stiffness or rigidity?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have your movements become slower over time?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience balance or walking difficulties?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms gradually worsened over months or years?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Consult a neurologist"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+
+  "Alzheimer’s Disease": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed progressive memory loss?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have difficulty performing familiar tasks?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience confusion about time or place?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have family members noticed behavioral changes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are symptoms progressively worsening?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Mental stimulation encouraged"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist care"]
+    }
+  },
+
+  "Vertigo": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you experience spinning sensation or dizziness?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are symptoms triggered by head movement?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience nausea or vomiting?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have hearing changes or ringing in ears?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted more than a week?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Avoid sudden movements"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+
+  "Dengue": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Have you had sudden high fever with severe body pain?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Mild fever", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience pain behind the eyes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you developed a rash?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have nausea or vomiting?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you been bitten by mosquitoes recently?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Hydration and rest"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+
+  "Malaria": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Do you experience fever with chills and sweating?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are fevers recurring in cycles?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you traveled to or live in a malaria-endemic area?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience headache or body aches?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel extreme fatigue?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Seek medical evaluation"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+
+  "Tuberculosis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 10,
+      "high": 18
+    },
+    "questions": [
+      {
+        "question": "Do you have a persistent cough lasting more than two weeks?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Less than two weeks", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have night sweats or fever?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you coughed up blood?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you been in close contact with someone with TB?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Seek medical evaluation"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+  "Typhoid Fever": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Have you had a prolonged high fever lasting more than 3 days?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Mild fever", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience abdominal pain or discomfort?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced diarrhea or constipation with fever?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you eaten food or water from an unhygienic source recently?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel extreme fatigue or weakness?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Hydration and rest"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek urgent medical care"]
+    }
+  },
+
+  "Cholera": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 15
+    },
+    "questions": [
+      {
+        "question": "Do you have sudden severe watery diarrhea?",
+        "options": [
+          { "text": "Yes", "score": 6 },
+          { "text": "Mild diarrhea", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you experiencing signs of dehydration (dry mouth, low urine)?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Mild", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you consumed unsafe drinking water recently?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have vomiting along with diarrhea?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are symptoms rapidly worsening?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Oral rehydration"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek emergency medical care"]
+    }
+  },
+
+  "Hepatitis B": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 15
+    },
+    "questions": [
+      {
+        "question": "Have you noticed yellowing of eyes or skin?",
+        "options": [
+          { "text": "Yes", "score": 5 },
+          { "text": "Mild", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience persistent fatigue or weakness?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have dark urine or pale stools?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had unprotected sex or needle exposure?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience abdominal discomfort on the right side?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist care"]
+    }
+  },
+
+  "HIV/AIDS": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Have you experienced frequent or recurrent infections?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have prolonged fever or night sweats?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you engaged in unprotected sex or needle sharing?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine health monitoring"],
+      "moderate": ["Seek medical testing"],
+      "high": ["Consult a healthcare professional urgently"]
+    }
+  },
+
+  "Chickenpox": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you have an itchy blister-like rash?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Mild rash", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did the rash start on the face or torso and spread?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have fever with the rash?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you been in contact with someone with chickenpox?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you unvaccinated or unsure of vaccination status?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Home care and isolation"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Back Pain": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience persistent back pain?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does pain limit your daily activities?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did pain begin after injury or heavy lifting?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience stiffness in the morning?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Has pain lasted more than 4 weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Posture correction and exercise"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+
+  "Sciatica": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Does pain radiate from lower back down the leg?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Mild radiation", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience tingling or numbness in the leg?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does pain worsen when sitting or bending?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have weakness in the affected leg?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Has pain persisted for more than 2 weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Stretching and posture care"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek neurological evaluation"]
+    }
+  },
+
+  "Arthritis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience joint pain or stiffness?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is stiffness worse in the morning?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do joints appear swollen or warm?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Has pain lasted for several months?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have reduced joint mobility?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Joint care and exercise"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist care"]
+    }
+  },
+
+  "Osteoporosis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you experienced fractures from minor injuries?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed loss of height or posture changes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you postmenopausal or above age 60?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have low calcium or vitamin D intake?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a family history of osteoporosis?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Bone health maintenance"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+  "Gout": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you experienced sudden severe pain in a joint, especially the big toe?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Mild pain", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is the affected joint swollen and red?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild swelling", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did the pain begin suddenly, often at night?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you consume alcohol or high-purine foods frequently?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had similar attacks before?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Lifestyle modification"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical treatment promptly"]
+    }
+  },
+
+  "Fibromyalgia": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience widespread body pain lasting more than 3 months?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel persistent fatigue even after rest?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience sleep disturbances?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms worsen with stress or exertion?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms been present for several months?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Lifestyle and stress management"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek specialist evaluation"]
+    }
+  },
+
+  "Type 2 Diabetes": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 8,
+      "high": 16
+    },
+    "questions": [
+      {
+        "question": "Do you experience frequent urination and excessive thirst?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained fatigue?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a family history of diabetes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed slow wound healing or frequent infections?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you overweight or physically inactive?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Healthy lifestyle maintenance"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation urgently"]
+    }
+  },
+
+  "Obesity": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you experienced significant weight gain recently?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild gain", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience breathlessness with minimal activity?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is physical activity limited in your daily routine?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you consume high-calorie or processed foods frequently?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have obesity-related conditions (diabetes, hypertension)?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Lifestyle improvement"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek structured medical weight management"]
+    }
+  },
+
+  "Thyroid Disorders": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed unexplained weight changes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild change", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience persistent fatigue or weakness?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel unusually sensitive to heat or cold?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed hair loss or skin changes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of thyroid disease?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek endocrinology evaluation"]
+    }
+  },
+
+  "Depression": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you felt persistently sad or hopeless for more than two weeks?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you lost interest in activities you previously enjoyed?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience changes in sleep or appetite?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel fatigued or lack energy most days?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms affected daily functioning?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Self-care and support"],
+      "moderate": ["Consult a mental health professional"],
+      "high": ["Seek professional mental health care urgently"]
+    }
+  },
+
+  "Anxiety Disorder": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you feel excessive worry or nervousness most days?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience physical symptoms like rapid heartbeat or sweating?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do anxiety symptoms interfere with daily activities?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have difficulty controlling your worries?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks or more?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Stress management"],
+      "moderate": ["Consult a mental health professional"],
+      "high": ["Seek professional mental health care"]
+    }
+  },
+
+  "Insomnia": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you have difficulty falling asleep most nights?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you wake up frequently during the night?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel unrefreshed upon waking?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Has sleep difficulty lasted more than one month?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does poor sleep affect daily functioning?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Sleep hygiene improvement"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Acne": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you have frequent pimples or clogged pores?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is acne persistent despite basic skincare?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do breakouts worsen with hormonal changes or stress?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do lesions leave scars or dark marks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you frequently use oily or comedogenic products?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Basic skincare"],
+      "moderate": ["Consult a dermatologist"],
+      "high": ["Seek dermatology care"]
+    }
+  },
+
+  "Eczema": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you experience itchy, inflamed skin patches?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild itching", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is skin dryness persistent or recurring?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms worsen with allergens or irritants?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of eczema or allergies?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do flares interfere with daily activities or sleep?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Moisturizing and trigger avoidance"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek dermatology care"]
+    }
+  },
+
+  "Psoriasis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you have thick, scaly patches on your skin?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild patches", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are the patches red and itchy?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms worsen with stress or illness?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of psoriasis?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do skin symptoms interfere with daily life?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Skin care and monitoring"],
+      "moderate": ["Consult a dermatologist"],
+      "high": ["Seek specialist dermatology care"]
+    }
+  },
+
+  "Skin Cancer (Melanoma)": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed a mole changing in size, shape, or color?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Slight change", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does the lesion have irregular borders or multiple colors?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Not sure", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Has the mole grown rapidly over weeks or months?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Does the lesion bleed or fail to heal?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of excessive sun exposure or sunburns?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine skin monitoring"],
+      "moderate": ["Consult a dermatologist"],
+      "high": ["Seek urgent dermatology evaluation"]
+    }
+  },
+
+  "Glaucoma": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Have you experienced gradual vision loss or tunnel vision?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild changes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience eye pain or pressure?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed halos around lights?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of glaucoma?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you over 40 years of age?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine eye exams"],
+      "moderate": ["Consult an ophthalmologist"],
+      "high": ["Urgent eye evaluation recommended"]
+    }
+  },
+
+  "Cataracts": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you experience blurred or cloudy vision?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have difficulty seeing at night?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you sensitive to bright light or glare?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms gradually worsened over time?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you over 60 years of age?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Regular eye monitoring"],
+      "moderate": ["Consult an ophthalmologist"],
+      "high": ["Surgical evaluation recommended"]
+    }
+  },
+
+  "Conjunctivitis": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you have red or irritated eyes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Mild redness", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there discharge from the eyes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Watery only", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do your eyes feel itchy or gritty?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Did symptoms start suddenly?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you been in contact with someone with eye infection?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Eye hygiene"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Seek medical evaluation"]
+    }
+  },
+
+  "Breast Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed a new lump in the breast or underarm?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed changes in breast shape or skin texture?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there nipple discharge or inversion?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a family history of breast cancer?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine self-exams"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent diagnostic evaluation required"]
+    }
+  },
+
+  "Colorectal Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed blood in your stool?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced persistent changes in bowel habits?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel persistent abdominal discomfort or cramping?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you over 50 years of age?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine screening"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent medical evaluation required"]
+    }
+  },
+
+  "Prostate Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you have difficulty or pain during urination?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience weak urine flow or frequent urination at night?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed blood in urine or semen?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of prostate cancer?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are you over 50 years of age?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Prompt urology evaluation advised"]
+    }
+  },
+
+  "Liver Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience persistent upper abdominal pain?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed yellowing of the skin or eyes?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of chronic liver disease or hepatitis?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you consume alcohol heavily or regularly?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent hepatology evaluation required"]
+    }
+  },
+
+  "Pancreatic Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you have persistent upper abdominal pain radiating to the back?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss or loss of appetite?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed yellowing of skin or eyes?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have new-onset diabetes or worsening blood sugar control?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of smoking?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine health monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent medical evaluation required"]
+    }
+  },
+  "Leukemia": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience persistent fatigue or weakness?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you get frequent infections or fevers?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you bruise or bleed easily?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed unexplained weight loss or night sweats?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms persist or worsen over weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine health monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent hematology evaluation required"]
+    }
+  },
+
+  "Lymphoma": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed painless swelling of lymph nodes?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience persistent fever or night sweats?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel persistent fatigue or weakness?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms lasted more than a few weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Observation and routine care"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent medical evaluation required"]
+    }
+  },
+
+  "Brain Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience persistent or worsening headaches?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you had new-onset seizures?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience vision, speech, or balance problems?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed personality or cognitive changes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Are symptoms progressively worsening?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Monitor symptoms"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent neurological evaluation required"]
+    }
+  },
+
+  "Ovarian Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Do you experience persistent abdominal bloating?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience pelvic or abdominal pain?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed early fullness or loss of appetite?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine health monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent gynecologic evaluation required"]
+    }
+  },
+
+  "Cervical Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you experienced abnormal vaginal bleeding?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience pelvic pain or discomfort?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there unusual vaginal discharge?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted or worsened?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you missed regular cervical screening?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine screening"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent gynecologic evaluation required"]
+    }
+  },
+
+  "Thyroid Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Have you noticed a new lump or swelling in the neck?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Not sure", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience hoarseness or voice changes?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have difficulty swallowing or breathing?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is there a family history of thyroid cancer?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Prompt specialist evaluation advised"]
+    }
+  },
+
+  "Kidney Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed blood in your urine?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience persistent lower back or flank pain?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you experienced unexplained weight loss?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience persistent fatigue?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of smoking?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent medical evaluation required"]
+    }
+  },
+
+  "Bladder Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 6,
+      "high": 12
+    },
+    "questions": [
+      {
+        "question": "Have you noticed blood in your urine?",
+        "options": [
+          { "text": "Yes", "score": 4 },
+          { "text": "Occasionally", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience pain or burning during urination?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have frequent or urgent urination?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do symptoms persist despite treatment?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have a history of smoking?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Routine monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent urology evaluation required"]
+    }
+  },
+
+  "Oral Cancer": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 5,
+      "high": 10
+    },
+    "questions": [
+      {
+        "question": "Do you have mouth sores that do not heal?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience pain or difficulty chewing or swallowing?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed lumps or thickening in the mouth or neck?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you use tobacco or consume alcohol frequently?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Oral hygiene and monitoring"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Urgent specialist evaluation required"]
+    }
+  },
+
+  "Anemia": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you feel tired or weak most days?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Sometimes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience shortness of breath with mild exertion?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have you noticed pale skin or dizziness?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you have heavy menstrual bleeding or blood loss?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms persisted for several weeks?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Dietary improvement"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Medical evaluation required"]
+    }
+  },
+
+  "Urinary Tract Infection (UTI)": {
+    "risk_thresholds": {
+      "low": 0,
+      "moderate": 4,
+      "high": 8
+    },
+    "questions": [
+      {
+        "question": "Do you experience burning sensation during urination?",
+        "options": [
+          { "text": "Yes", "score": 3 },
+          { "text": "Mild burning", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you feel frequent or urgent need to urinate?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "Occasionally", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Is your urine cloudy, foul-smelling, or bloody?",
+        "options": [
+          { "text": "Yes", "score": 2 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Do you experience lower abdominal pain or discomfort?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      },
+      {
+        "question": "Have symptoms worsened or lasted more than a few days?",
+        "options": [
+          { "text": "Yes", "score": 1 },
+          { "text": "No", "score": 0 }
+        ]
+      }
+    ],
+    "recommendations": {
+      "low": ["Hydration and hygiene"],
+      "moderate": ["Consult a healthcare provider"],
+      "high": ["Prompt medical treatment required"]
+    }
+  }
+}

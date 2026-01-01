@@ -1,0 +1,26 @@
+[
+  {
+    "id": "migraine",
+    "name": "Migraine",
+    "category": "Neurological",
+    "symptoms": ["headache", "vomiting"],
+    "urgency": "Moderate",
+    "description": "Headaches and vomiting are common symptoms of migraines."
+  },
+  {
+    "id": "gastroenteritis",
+    "name": "Gastroenteritis",
+    "category": "Gastrointestinal",
+    "symptoms": ["vomiting", "fever"],
+    "urgency": "Moderate",
+    "description": "Vomiting and fever may indicate irritation or infection of the stomach and intestines."
+  },
+  {
+    "id": "meningitis",
+    "name": "Meningitis",
+    "category": "Infectious Disease",
+    "symptoms": ["headache", "vomiting", "fever"],
+    "urgency": "High",
+    "description": "Headache and vomiting with fever can indicate meningitis, which requires immediate medical attention."
+  }
+]

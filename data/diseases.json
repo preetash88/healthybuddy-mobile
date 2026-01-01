@@ -1,0 +1,1672 @@
+[
+  {
+    "name": "Heart Attack (Myocardial Infarction)",
+    "category": "Cardiovascular",
+    "description": "A heart attack occurs when blood flow to the heart muscle is suddenly blocked, leading to tissue damage. It is a medical emergency.",
+    "symptoms": [
+      "Chest pain or discomfort",
+      "Shortness of breath",
+      "Pain in arms, neck, jaw, or back",
+      "Nausea or vomiting",
+      "Cold sweat"
+    ],
+    "causes": "Blockage of coronary arteries due to plaque buildup or blood clots.",
+    "risk_factors": [
+      "Smoking",
+      "High blood pressure",
+      "High cholesterol",
+      "Diabetes",
+      "Obesity",
+      "Family history of heart disease"
+    ],
+    "prevention_tips": [
+      "Maintain a healthy diet",
+      "Exercise regularly",
+      "Avoid smoking",
+      "Manage stress",
+      "Monitor blood pressure and cholesterol"
+    ],
+    "when_to_seek_help": "Seek immediate emergency medical attention if chest pain or severe discomfort occurs.",
+    "image_url": "/images/heart-attack.png",
+    "assessment_questions": [
+      {
+        "question": "Are you experiencing chest pain or tightness?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Mild", "value": "mild", "score": 2 },
+          { "label": "Severe", "value": "severe", "score": 5 }
+        ]
+      },
+      {
+        "question": "Do you smoke cigarettes?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Occasionally", "value": "occasionally", "score": 1 },
+          { "label": "Regularly", "value": "regularly", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Cardiac Arrest",
+    "category": "Cardiovascular",
+    "description": "Cardiac arrest occurs when the heart suddenly stops beating, cutting off blood flow to the brain and other vital organs.",
+    "symptoms": [
+      "Sudden collapse",
+      "Loss of consciousness",
+      "No pulse",
+      "No breathing"
+    ],
+    "causes": "Electrical malfunction of the heart leading to abnormal heart rhythm.",
+    "risk_factors": [
+      "Heart disease",
+      "Previous heart attack",
+      "Arrhythmias",
+      "Drug abuse"
+    ],
+    "prevention_tips": [
+      "Regular heart checkups",
+      "Use of implantable defibrillators if advised",
+      "Avoid substance abuse"
+    ],
+    "when_to_seek_help": "Call emergency services immediately if a person collapses and is unresponsive.",
+    "image_url": "/images/cardiac-arrest.png",
+    "assessment_questions": [
+      {
+        "question": "Have you ever been diagnosed with heart rhythm problems?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Heart Failure",
+    "category": "Cardiovascular",
+    "description": "A chronic condition in which the heart cannot pump enough blood to meet the body’s needs.",
+    "symptoms": [
+      "Shortness of breath",
+      "Fatigue",
+      "Swelling in legs or ankles"
+    ],
+    "causes": "Coronary artery disease, hypertension, damaged heart muscle.",
+    "risk_factors": ["Heart disease", "Diabetes", "High blood pressure"],
+    "prevention_tips": [
+      "Control blood pressure",
+      "Limit salt intake",
+      "Regular physical activity"
+    ],
+    "when_to_seek_help": "Worsening breathlessness or swelling.",
+    "image_url": "/images/heart-failure.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience shortness of breath during routine activities?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Sometimes", "value": "sometimes", "score": 2 },
+          { "label": "Often", "value": "often", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Hypertension",
+    "category": "Cardiovascular",
+    "description": "A condition in which blood pressure remains consistently high over time.",
+    "symptoms": ["Often asymptomatic", "Headaches", "Dizziness"],
+    "causes": "Genetics, lifestyle factors, excess salt intake.",
+    "risk_factors": ["Obesity", "Stress", "High salt diet", "Family history"],
+    "prevention_tips": [
+      "Reduce salt intake",
+      "Exercise regularly",
+      "Manage stress"
+    ],
+    "when_to_seek_help": "Repeated high blood pressure readings.",
+    "image_url": "/images/hypertension.png",
+    "assessment_questions": [
+      {
+        "question": "Have you been told you have high blood pressure before?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Coronary Artery Disease",
+    "category": "Cardiovascular",
+    "description": "A condition caused by narrowing of coronary arteries that supply blood to the heart.",
+    "symptoms": ["Chest pain", "Shortness of breath", "Fatigue"],
+    "causes": "Atherosclerosis (plaque buildup).",
+    "risk_factors": ["Smoking", "High cholesterol", "Diabetes"],
+    "prevention_tips": ["Heart-healthy diet", "Exercise", "Quit smoking"],
+    "when_to_seek_help": "Chest pain during exertion.",
+    "image_url": "/images/coronary-artery-disease.png",
+    "assessment_questions": [
+      {
+        "question": "Do you feel chest pain during physical activity?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Lung Cancer",
+    "category": "Respiratory",
+    "description": "A cancer that begins in the lungs, most commonly associated with smoking.",
+    "symptoms": [
+      "Persistent cough",
+      "Chest pain",
+      "Shortness of breath",
+      "Unexplained weight loss",
+      "Coughing up blood"
+    ],
+    "causes": "Long-term exposure to tobacco smoke or environmental pollutants.",
+    "risk_factors": [
+      "Smoking",
+      "Secondhand smoke",
+      "Air pollution",
+      "Exposure to asbestos"
+    ],
+    "prevention_tips": ["Avoid smoking", "Reduce pollutant exposure"],
+    "when_to_seek_help": "Cough lasting more than 3 weeks or coughing blood.",
+    "image_url": "/images/lung-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have a persistent cough lasting more than 3 weeks?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      },
+      {
+        "question": "Do you currently smoke or have you smoked before?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "Never", "value": "never", "score": 0 },
+          { "label": "Former", "value": "former", "score": 2 },
+          { "label": "Current", "value": "current", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Asthma",
+    "category": "Respiratory",
+    "description": "A chronic respiratory condition causing airway inflammation and narrowing.",
+    "symptoms": ["Wheezing", "Shortness of breath", "Chest tightness"],
+    "causes": "Allergens, exercise, genetics.",
+    "risk_factors": ["Family history", "Allergies"],
+    "prevention_tips": ["Avoid triggers", "Use prescribed inhalers"],
+    "when_to_seek_help": "Frequent or severe asthma attacks.",
+    "image_url": "/images/asthma.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience wheezing or breathing difficulty?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Sometimes", "value": "sometimes", "score": 2 },
+          { "label": "Often", "value": "often", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Bronchitis",
+    "category": "Respiratory",
+    "description": "Inflammation of the bronchial tubes leading to coughing and mucus production.",
+    "symptoms": ["Persistent cough", "Mucus production", "Fatigue"],
+    "causes": "Viral or bacterial infections.",
+    "risk_factors": ["Smoking", "Air pollution"],
+    "prevention_tips": ["Avoid smoking", "Hand hygiene"],
+    "when_to_seek_help": "Cough lasting more than 3 weeks.",
+    "image_url": "/images/bronchitis.png",
+    "assessment_questions": [
+      {
+        "question": "Are you producing mucus with your cough?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Pneumonia",
+    "category": "Respiratory",
+    "description": "An infection that inflames air sacs in the lungs.",
+    "symptoms": ["Fever", "Cough", "Chest pain", "Shortness of breath"],
+    "causes": "Bacterial, viral, or fungal infections.",
+    "risk_factors": ["Older age", "Weak immune system"],
+    "prevention_tips": ["Vaccination", "Good hygiene"],
+    "when_to_seek_help": "High fever or breathing difficulty.",
+    "image_url": "/images/pneumonia.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have fever with cough and chest pain?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Sinusitis",
+    "category": "Respiratory",
+    "description": "Inflammation of the sinuses causing facial pain and congestion.",
+    "symptoms": ["Facial pain", "Nasal congestion", "Headache"],
+    "causes": "Infections, allergies.",
+    "risk_factors": ["Allergic rhinitis", "Colds"],
+    "prevention_tips": ["Manage allergies", "Stay hydrated"],
+    "when_to_seek_help": "Symptoms lasting over 10 days.",
+    "image_url": "/images/sinusitis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have facial pain with nasal congestion?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "COPD",
+    "category": "Respiratory",
+    "description": "A group of progressive lung diseases that block airflow.",
+    "symptoms": ["Chronic cough", "Breathlessness", "Wheezing"],
+    "causes": "Long-term smoking.",
+    "risk_factors": ["Smoking", "Air pollution"],
+    "prevention_tips": ["Quit smoking", "Pulmonary rehabilitation"],
+    "when_to_seek_help": "Worsening breathing difficulty.",
+    "image_url": "/images/copd.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience breathlessness during daily activities?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Allergic Rhinitis",
+    "category": "Respiratory",
+    "description": "An allergic reaction causing sneezing, congestion, and itchy eyes.",
+    "symptoms": ["Sneezing", "Runny nose", "Itchy eyes"],
+    "causes": "Exposure to allergens like pollen or dust.",
+    "risk_factors": ["Family history", "Other allergies"],
+    "prevention_tips": ["Avoid allergens", "Use antihistamines"],
+    "when_to_seek_help": "Persistent symptoms affecting daily life.",
+    "image_url": "/images/allergic-rhinitis.png",
+    "assessment_questions": [
+      {
+        "question": "Do your symptoms worsen during certain seasons?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Acid Reflux (GERD)",
+    "category": "Digestive",
+    "description": "A digestive disorder where stomach acid frequently flows back into the esophagus, causing irritation.",
+    "symptoms": [
+      "Heartburn",
+      "Chest pain",
+      "Regurgitation of food or sour liquid",
+      "Difficulty swallowing"
+    ],
+    "causes": "Weak lower esophageal sphincter allowing acid reflux.",
+    "risk_factors": ["Obesity", "Smoking", "Pregnancy", "Large meals"],
+    "prevention_tips": [
+      "Avoid spicy foods",
+      "Eat smaller meals",
+      "Do not lie down after eating",
+      "Maintain healthy weight"
+    ],
+    "when_to_seek_help": "Frequent or severe heartburn not relieved by medication.",
+    "image_url": "/images/gerd.png",
+    "assessment_questions": [
+      {
+        "question": "Do you frequently experience burning sensation in your chest after meals?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Sometimes", "value": "sometimes", "score": 2 },
+          { "label": "Often", "value": "often", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Gastritis",
+    "category": "Digestive",
+    "description": "Inflammation of the stomach lining that can cause pain and nausea.",
+    "symptoms": ["Upper abdominal pain", "Nausea", "Vomiting", "Bloating"],
+    "causes": "Infection, excessive alcohol use, prolonged NSAID use.",
+    "risk_factors": ["Alcohol consumption", "Smoking", "Stress"],
+    "prevention_tips": [
+      "Avoid alcohol",
+      "Eat balanced meals",
+      "Avoid unnecessary painkillers"
+    ],
+    "when_to_seek_help": "Persistent stomach pain or vomiting blood.",
+    "image_url": "/images/gastritis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience stomach pain or nausea after eating?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Occasionally", "value": "occasionally", "score": 2 },
+          { "label": "Frequently", "value": "frequently", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Peptic Ulcer",
+    "category": "Digestive",
+    "description": "Open sores that develop on the lining of the stomach or upper small intestine.",
+    "symptoms": ["Burning stomach pain", "Bloating", "Heartburn", "Nausea"],
+    "causes": "Helicobacter pylori infection or long-term NSAID use.",
+    "risk_factors": ["Smoking", "Alcohol use", "Chronic painkiller use"],
+    "prevention_tips": ["Avoid NSAIDs", "Limit alcohol", "Quit smoking"],
+    "when_to_seek_help": "Severe abdominal pain or black stools.",
+    "image_url": "/images/peptic-ulcer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience burning pain in your stomach that improves after eating?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Irritable Bowel Syndrome (IBS)",
+    "category": "Digestive",
+    "description": "A common disorder affecting the large intestine, causing cramping and bowel changes.",
+    "symptoms": ["Abdominal pain", "Bloating", "Diarrhea", "Constipation"],
+    "causes": "Gut-brain interaction issues, stress.",
+    "risk_factors": ["Stress", "Food intolerance"],
+    "prevention_tips": [
+      "Manage stress",
+      "Avoid trigger foods",
+      "Eat fiber-rich foods"
+    ],
+    "when_to_seek_help": "Symptoms interfering with daily life.",
+    "image_url": "/images/ibs.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience abdominal pain along with changes in bowel habits?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Jaundice",
+    "category": "Digestive",
+    "description": "A condition characterized by yellowing of the skin and eyes due to high bilirubin levels.",
+    "symptoms": ["Yellowing of skin", "Yellow eyes", "Dark urine", "Fatigue"],
+    "causes": "Liver disease, hepatitis, bile duct obstruction.",
+    "risk_factors": ["Liver disorders", "Alcohol abuse"],
+    "prevention_tips": ["Avoid alcohol", "Maintain liver health"],
+    "when_to_seek_help": "Sudden yellowing of skin or eyes.",
+    "image_url": "/images/jaundice.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed yellowing of your skin or eyes?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Food Poisoning",
+    "category": "Digestive",
+    "description": "Illness caused by eating contaminated food.",
+    "symptoms": ["Diarrhea", "Vomiting", "Abdominal cramps", "Fever"],
+    "causes": "Bacteria, viruses, or parasites in food.",
+    "risk_factors": ["Unhygienic food", "Contaminated water"],
+    "prevention_tips": ["Eat freshly cooked food", "Maintain food hygiene"],
+    "when_to_seek_help": "Severe dehydration or high fever.",
+    "image_url": "/images/food-poisoning.png",
+    "assessment_questions": [
+      {
+        "question": "Did your symptoms start after eating outside or questionable food?",
+        "type": "risk_factor",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Constipation",
+    "category": "Digestive",
+    "description": "A condition where bowel movements become infrequent or difficult.",
+    "symptoms": ["Infrequent stools", "Hard stools", "Abdominal discomfort"],
+    "causes": "Low fiber intake, dehydration, inactivity.",
+    "risk_factors": ["Poor diet", "Sedentary lifestyle"],
+    "prevention_tips": [
+      "Increase fiber intake",
+      "Drink plenty of water",
+      "Exercise regularly"
+    ],
+    "when_to_seek_help": "Persistent constipation lasting more than 2 weeks.",
+    "image_url": "/images/constipation.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have fewer than three bowel movements per week?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Stroke",
+    "category": "Neurological",
+    "description": "A medical emergency that occurs when blood supply to part of the brain is interrupted or reduced.",
+    "symptoms": [
+      "Sudden weakness on one side",
+      "Difficulty speaking",
+      "Facial drooping",
+      "Loss of balance"
+    ],
+    "causes": "Blocked or ruptured blood vessels in the brain.",
+    "risk_factors": [
+      "High blood pressure",
+      "Smoking",
+      "Diabetes",
+      "Heart disease"
+    ],
+    "prevention_tips": [
+      "Control blood pressure",
+      "Exercise regularly",
+      "Avoid smoking"
+    ],
+    "when_to_seek_help": "Immediate emergency medical attention is required.",
+    "image_url": "/images/stroke.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced sudden weakness or numbness on one side of your body?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 5 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Migraine",
+    "category": "Neurological",
+    "description": "A neurological condition characterized by intense, recurring headaches.",
+    "symptoms": [
+      "Throbbing headache",
+      "Nausea",
+      "Sensitivity to light",
+      "Sensitivity to sound"
+    ],
+    "causes": "Neurological triggers, hormonal changes, stress.",
+    "risk_factors": ["Stress", "Family history", "Hormonal changes"],
+    "prevention_tips": ["Avoid triggers", "Maintain regular sleep"],
+    "when_to_seek_help": "Severe or frequent headaches disrupting daily life.",
+    "image_url": "/images/migraine.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience severe headaches with nausea or light sensitivity?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Epilepsy",
+    "category": "Neurological",
+    "description": "A neurological disorder characterized by recurrent seizures.",
+    "symptoms": ["Seizures", "Temporary confusion", "Loss of consciousness"],
+    "causes": "Brain injury, genetic factors, infections.",
+    "risk_factors": ["Head injury", "Family history"],
+    "prevention_tips": ["Medication adherence", "Avoid seizure triggers"],
+    "when_to_seek_help": "First-time seizure or prolonged seizure.",
+    "image_url": "/images/epilepsy.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced repeated seizure episodes?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Parkinson’s Disease",
+    "category": "Neurological",
+    "description": "A progressive nervous system disorder affecting movement.",
+    "symptoms": ["Tremors", "Muscle stiffness", "Slowed movements"],
+    "causes": "Loss of dopamine-producing brain cells.",
+    "risk_factors": ["Age", "Genetics"],
+    "prevention_tips": ["Regular exercise", "Medication adherence"],
+    "when_to_seek_help": "Progressive movement difficulty.",
+    "image_url": "/images/parkinsons.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience persistent tremors or muscle stiffness?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Alzheimer’s Disease",
+    "category": "Neurological",
+    "description": "A progressive disorder that causes memory loss and cognitive decline.",
+    "symptoms": [
+      "Memory loss",
+      "Confusion",
+      "Difficulty performing familiar tasks"
+    ],
+    "causes": "Brain cell degeneration.",
+    "risk_factors": ["Age", "Family history"],
+    "prevention_tips": ["Mental stimulation", "Healthy lifestyle"],
+    "when_to_seek_help": "Memory issues affecting daily functioning.",
+    "image_url": "/images/alzheimers.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed worsening memory problems over time?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Vertigo",
+    "category": "Neurological",
+    "description": "A sensation of spinning or dizziness.",
+    "symptoms": ["Dizziness", "Nausea", "Loss of balance"],
+    "causes": "Inner ear problems, nerve issues.",
+    "risk_factors": ["Ear infections", "Head injury"],
+    "prevention_tips": ["Avoid sudden movements", "Vestibular therapy"],
+    "when_to_seek_help": "Persistent or severe dizziness.",
+    "image_url": "/images/vertigo.png",
+    "assessment_questions": [
+      {
+        "question": "Do you feel a spinning sensation when changing head position?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Dengue",
+    "category": "Infectious",
+    "description": "A mosquito-borne viral infection causing high fever and body pain.",
+    "symptoms": [
+      "High fever",
+      "Severe headache",
+      "Joint and muscle pain",
+      "Rash"
+    ],
+    "causes": "Dengue virus transmitted by mosquitoes.",
+    "risk_factors": ["Mosquito exposure", "Tropical climate"],
+    "prevention_tips": ["Use mosquito repellents", "Eliminate stagnant water"],
+    "when_to_seek_help": "Severe abdominal pain or bleeding.",
+    "image_url": "/images/dengue.png",
+    "assessment_questions": [
+      {
+        "question": "Have you had a sudden high fever with severe body pain?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Malaria",
+    "category": "Infectious",
+    "description": "A life-threatening disease transmitted through mosquito bites.",
+    "symptoms": ["Fever with chills", "Sweating", "Headache"],
+    "causes": "Plasmodium parasites.",
+    "risk_factors": ["Mosquito exposure", "Travel to endemic areas"],
+    "prevention_tips": ["Mosquito nets", "Preventive medication"],
+    "when_to_seek_help": "Recurring fever with chills.",
+    "image_url": "/images/malaria.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience fever episodes with chills and sweating?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Tuberculosis",
+    "category": "Infectious",
+    "description": "A bacterial infection that primarily affects the lungs.",
+    "symptoms": ["Persistent cough", "Weight loss", "Night sweats", "Fever"],
+    "causes": "Mycobacterium tuberculosis bacteria.",
+    "risk_factors": ["Crowded living conditions", "Weak immune system"],
+    "prevention_tips": ["BCG vaccination", "Early treatment"],
+    "when_to_seek_help": "Cough lasting more than 2 weeks.",
+    "image_url": "/images/tuberculosis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have a cough lasting more than two weeks with weight loss?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Typhoid Fever",
+    "category": "Infectious",
+    "description": "A bacterial infection spread through contaminated food and water.",
+    "symptoms": ["High fever", "Abdominal pain", "Diarrhea or constipation"],
+    "causes": "Salmonella typhi bacteria.",
+    "risk_factors": ["Unsafe drinking water", "Poor sanitation"],
+    "prevention_tips": ["Drink clean water", "Maintain hygiene"],
+    "when_to_seek_help": "Persistent high fever.",
+    "image_url": "/images/typhoid.png",
+    "assessment_questions": [
+      {
+        "question": "Have you had prolonged fever with abdominal discomfort?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Cholera",
+    "category": "Infectious",
+    "description": "An acute diarrheal disease caused by contaminated water.",
+    "symptoms": ["Severe watery diarrhea", "Dehydration", "Vomiting"],
+    "causes": "Vibrio cholerae bacteria.",
+    "risk_factors": ["Unsafe water", "Poor sanitation"],
+    "prevention_tips": ["Safe drinking water", "Proper sanitation"],
+    "when_to_seek_help": "Signs of severe dehydration.",
+    "image_url": "/images/cholera.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have sudden severe watery diarrhea?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Hepatitis B",
+    "category": "Infectious",
+    "description": "A viral infection that attacks the liver.",
+    "symptoms": ["Fatigue", "Jaundice", "Abdominal pain"],
+    "causes": "Hepatitis B virus.",
+    "risk_factors": ["Unprotected sex", "Shared needles"],
+    "prevention_tips": ["Vaccination", "Safe practices"],
+    "when_to_seek_help": "Yellowing of eyes or skin.",
+    "image_url": "/images/hepatitis-b.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed yellowing of your eyes or skin with fatigue?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "HIV/AIDS",
+    "category": "Infectious",
+    "description": "A chronic condition caused by the human immunodeficiency virus that weakens the immune system.",
+    "symptoms": ["Recurrent infections", "Weight loss", "Fever"],
+    "causes": "HIV infection.",
+    "risk_factors": ["Unprotected sex", "Shared needles"],
+    "prevention_tips": ["Safe sex", "Regular testing"],
+    "when_to_seek_help": "Recurrent infections or unexplained weight loss.",
+    "image_url": "/images/hiv.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced frequent infections or unexplained weight loss?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Chickenpox",
+    "category": "Infectious",
+    "description": "A highly contagious viral infection causing itchy rash and fever.",
+    "symptoms": ["Itchy rash", "Fever", "Fatigue"],
+    "causes": "Varicella-zoster virus.",
+    "risk_factors": ["Lack of vaccination"],
+    "prevention_tips": [
+      "Vaccination",
+      "Avoid contact with infected individuals"
+    ],
+    "when_to_seek_help": "Severe rash or complications.",
+    "image_url": "/images/chickenpox.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have an itchy blister-like rash with fever?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Back Pain",
+    "category": "Musculoskeletal",
+    "description": "Pain or discomfort in the upper, middle, or lower back.",
+    "symptoms": [
+      "Aching or stabbing pain",
+      "Muscle stiffness",
+      "Reduced mobility"
+    ],
+    "causes": "Muscle strain, poor posture, injury.",
+    "risk_factors": ["Sedentary lifestyle", "Poor posture", "Heavy lifting"],
+    "prevention_tips": [
+      "Maintain proper posture",
+      "Regular exercise",
+      "Avoid heavy lifting"
+    ],
+    "when_to_seek_help": "Severe or persistent pain lasting more than a few weeks.",
+    "image_url": "/images/back-pain.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience persistent back pain that limits movement?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Sciatica",
+    "category": "Musculoskeletal",
+    "description": "Pain radiating along the sciatic nerve from the lower back to the leg.",
+    "symptoms": ["Lower back pain", "Leg pain", "Tingling or numbness"],
+    "causes": "Herniated disc, spinal stenosis.",
+    "risk_factors": ["Prolonged sitting", "Spinal injury"],
+    "prevention_tips": ["Stretching exercises", "Proper posture"],
+    "when_to_seek_help": "Severe pain or weakness in leg.",
+    "image_url": "/images/sciatica.png",
+    "assessment_questions": [
+      {
+        "question": "Does your pain radiate from the lower back to the leg?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Arthritis",
+    "category": "Musculoskeletal",
+    "description": "Inflammation of one or more joints causing pain and stiffness.",
+    "symptoms": ["Joint pain", "Stiffness", "Swelling"],
+    "causes": "Joint wear and tear or autoimmune conditions.",
+    "risk_factors": ["Aging", "Joint injury", "Family history"],
+    "prevention_tips": [
+      "Maintain healthy weight",
+      "Regular low-impact exercise"
+    ],
+    "when_to_seek_help": "Persistent joint pain and swelling.",
+    "image_url": "/images/arthritis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience joint stiffness especially in the morning?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Osteoporosis",
+    "category": "Musculoskeletal",
+    "description": "A condition characterized by weakened bones and increased fracture risk.",
+    "symptoms": ["Back pain", "Loss of height", "Bone fractures"],
+    "causes": "Low bone density due to aging or hormonal changes.",
+    "risk_factors": ["Postmenopausal women", "Calcium deficiency"],
+    "prevention_tips": [
+      "Calcium and vitamin D intake",
+      "Weight-bearing exercises"
+    ],
+    "when_to_seek_help": "Fractures from minor injuries.",
+    "image_url": "/images/osteoporosis.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced fractures from minor falls?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Gout",
+    "category": "Musculoskeletal",
+    "description": "A form of arthritis characterized by sudden, severe joint pain.",
+    "symptoms": ["Severe joint pain", "Swelling", "Redness"],
+    "causes": "Excess uric acid buildup.",
+    "risk_factors": ["High-purine diet", "Alcohol consumption"],
+    "prevention_tips": ["Limit alcohol", "Healthy diet"],
+    "when_to_seek_help": "Sudden intense joint pain.",
+    "image_url": "/images/gout.png",
+    "assessment_questions": [
+      {
+        "question": "Have you had sudden severe pain in a joint, especially the big toe?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Fibromyalgia",
+    "category": "Musculoskeletal",
+    "description": "A disorder characterized by widespread musculoskeletal pain and fatigue.",
+    "symptoms": ["Widespread pain", "Fatigue", "Sleep disturbances"],
+    "causes": "Abnormal pain processing in the brain.",
+    "risk_factors": ["Stress", "Family history"],
+    "prevention_tips": ["Stress management", "Regular exercise"],
+    "when_to_seek_help": "Persistent widespread pain.",
+    "image_url": "/images/fibromyalgia.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience widespread body pain lasting more than 3 months?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Type 2 Diabetes",
+    "category": "Metabolic",
+    "description": "A chronic condition affecting how the body processes blood sugar.",
+    "symptoms": ["Frequent urination", "Increased thirst", "Fatigue"],
+    "causes": "Insulin resistance.",
+    "risk_factors": ["Obesity", "Sedentary lifestyle", "Family history"],
+    "prevention_tips": ["Healthy diet", "Regular exercise"],
+    "when_to_seek_help": "Persistently high blood sugar levels.",
+    "image_url": "/images/type2-diabetes.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience excessive thirst and frequent urination?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Obesity",
+    "category": "Metabolic",
+    "description": "A condition involving excessive body fat that increases health risks.",
+    "symptoms": ["Weight gain", "Fatigue", "Breathlessness"],
+    "causes": "Excess calorie intake and inactivity.",
+    "risk_factors": ["Poor diet", "Sedentary lifestyle"],
+    "prevention_tips": ["Balanced diet", "Regular physical activity"],
+    "when_to_seek_help": "Rapid or uncontrolled weight gain.",
+    "image_url": "/images/obesity.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced significant weight gain recently?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Thyroid Disorders",
+    "category": "Metabolic",
+    "description": "Conditions affecting thyroid hormone production.",
+    "symptoms": ["Weight changes", "Fatigue", "Temperature sensitivity"],
+    "causes": "Hormonal imbalance.",
+    "risk_factors": ["Autoimmune disease", "Family history"],
+    "prevention_tips": ["Regular thyroid checkups"],
+    "when_to_seek_help": "Unexplained weight or energy changes.",
+    "image_url": "/images/thyroid.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed unexplained weight changes or fatigue?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Depression",
+    "category": "Mental Health",
+    "description": "A mood disorder causing persistent feelings of sadness and loss of interest.",
+    "symptoms": [
+      "Persistent sadness",
+      "Loss of interest",
+      "Fatigue",
+      "Sleep disturbances"
+    ],
+    "causes": "Chemical imbalance, stress, trauma.",
+    "risk_factors": ["Chronic stress", "Family history", "Trauma"],
+    "prevention_tips": [
+      "Seek counseling",
+      "Maintain social connections",
+      "Regular physical activity"
+    ],
+    "when_to_seek_help": "Thoughts of self-harm or inability to function daily.",
+    "image_url": "/images/depression.png",
+    "assessment_questions": [
+      {
+        "question": "Have you been feeling persistently sad or hopeless for weeks?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Anxiety Disorder",
+    "category": "Mental Health",
+    "description": "A condition involving excessive fear, worry, or nervousness.",
+    "symptoms": [
+      "Restlessness",
+      "Rapid heartbeat",
+      "Excessive worry",
+      "Difficulty concentrating"
+    ],
+    "causes": "Stress, genetics, chemical imbalance.",
+    "risk_factors": ["Chronic stress", "Trauma"],
+    "prevention_tips": ["Relaxation techniques", "Therapy"],
+    "when_to_seek_help": "Anxiety interfering with daily activities.",
+    "image_url": "/images/anxiety.png",
+    "assessment_questions": [
+      {
+        "question": "Do you feel anxious or worried most days?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Insomnia",
+    "category": "Mental Health",
+    "description": "A sleep disorder characterized by difficulty falling or staying asleep.",
+    "symptoms": ["Difficulty sleeping", "Frequent waking", "Daytime fatigue"],
+    "causes": "Stress, anxiety, poor sleep habits.",
+    "risk_factors": ["Mental health conditions", "Irregular sleep schedule"],
+    "prevention_tips": [
+      "Maintain sleep routine",
+      "Limit screen time before bed"
+    ],
+    "when_to_seek_help": "Persistent sleep problems affecting daily life.",
+    "image_url": "/images/insomnia.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have trouble falling or staying asleep most nights?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Acne",
+    "category": "Skin",
+    "description": "A skin condition that occurs when hair follicles become clogged with oil and dead skin cells.",
+    "symptoms": ["Pimples", "Blackheads", "Whiteheads"],
+    "causes": "Hormonal changes, excess oil production.",
+    "risk_factors": ["Adolescence", "Hormonal imbalance"],
+    "prevention_tips": ["Gentle skin cleansing", "Avoid oily products"],
+    "when_to_seek_help": "Severe or persistent acne.",
+    "image_url": "/images/acne.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have frequent pimples or clogged pores?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 1 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Eczema",
+    "category": "Skin",
+    "description": "A condition causing inflamed, itchy, and irritated skin.",
+    "symptoms": ["Itching", "Red patches", "Dry skin"],
+    "causes": "Immune system dysfunction, allergens.",
+    "risk_factors": ["Family history", "Allergies"],
+    "prevention_tips": ["Moisturize regularly", "Avoid irritants"],
+    "when_to_seek_help": "Severe itching or skin infection.",
+    "image_url": "/images/eczema.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience itchy, inflamed skin patches?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Psoriasis",
+    "category": "Skin",
+    "description": "An autoimmune condition causing rapid skin cell buildup.",
+    "symptoms": ["Thick scaly patches", "Red skin", "Itching"],
+    "causes": "Immune system overactivity.",
+    "risk_factors": ["Family history", "Stress"],
+    "prevention_tips": ["Manage stress", "Moisturize skin"],
+    "when_to_seek_help": "Painful or widespread skin patches.",
+    "image_url": "/images/psoriasis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have thick, scaly patches on your skin?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Skin Cancer (Melanoma)",
+    "category": "Skin",
+    "description": "A serious form of skin cancer that develops from pigment-producing cells.",
+    "symptoms": ["Changing mole", "Irregular skin lesion", "Bleeding mole"],
+    "causes": "Excessive UV exposure.",
+    "risk_factors": ["Sun exposure", "Fair skin"],
+    "prevention_tips": ["Use sunscreen", "Avoid excessive sun exposure"],
+    "when_to_seek_help": "Changes in size, shape, or color of a mole.",
+    "image_url": "/images/melanoma.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed a mole changing in size, shape, or color?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Glaucoma",
+    "category": "Eye",
+    "description": "An eye condition that damages the optic nerve, often due to high eye pressure.",
+    "symptoms": ["Vision loss", "Eye pain", "Halos around lights"],
+    "causes": "Increased intraocular pressure.",
+    "risk_factors": ["Age", "Family history"],
+    "prevention_tips": ["Regular eye exams"],
+    "when_to_seek_help": "Sudden vision changes or eye pain.",
+    "image_url": "/images/glaucoma.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced gradual vision loss or eye pain?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Cataracts",
+    "category": "Eye",
+    "description": "Clouding of the eye lens leading to blurred vision.",
+    "symptoms": [
+      "Blurred vision",
+      "Glare sensitivity",
+      "Difficulty seeing at night"
+    ],
+    "causes": "Aging, prolonged UV exposure.",
+    "risk_factors": ["Age", "Diabetes"],
+    "prevention_tips": ["Wear sunglasses", "Regular eye checkups"],
+    "when_to_seek_help": "Vision interfering with daily activities.",
+    "image_url": "/images/cataracts.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have blurry vision or difficulty seeing at night?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Conjunctivitis",
+    "category": "Eye",
+    "description": "Inflammation of the conjunctiva, commonly known as pink eye.",
+    "symptoms": ["Red eyes", "Itching", "Eye discharge"],
+    "causes": "Viral or bacterial infection, allergies.",
+    "risk_factors": ["Poor hygiene", "Contact with infected individuals"],
+    "prevention_tips": ["Hand hygiene", "Avoid touching eyes"],
+    "when_to_seek_help": "Severe pain or vision changes.",
+    "image_url": "/images/conjunctivitis.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have red, itchy eyes with discharge?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Breast Cancer",
+    "category": "Other",
+    "description": "A cancer that forms in the cells of the breast.",
+    "symptoms": ["Breast lump", "Change in breast shape", "Nipple discharge"],
+    "causes": "Genetic mutations, hormonal factors.",
+    "risk_factors": ["Family history", "Hormonal therapy", "Age"],
+    "prevention_tips": ["Regular screening", "Self-examinations"],
+    "when_to_seek_help": "New lump or breast changes.",
+    "image_url": "/images/breast-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed a new lump or change in your breast?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Colorectal Cancer",
+    "category": "Other",
+    "description": "Cancer affecting the colon or rectum.",
+    "symptoms": [
+      "Blood in stool",
+      "Change in bowel habits",
+      "Unexplained weight loss"
+    ],
+    "causes": "Genetic mutations, lifestyle factors.",
+    "risk_factors": ["Age", "Family history", "Low-fiber diet"],
+    "prevention_tips": ["High-fiber diet", "Regular screening"],
+    "when_to_seek_help": "Persistent bowel changes or bleeding.",
+    "image_url": "/images/colorectal-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed blood in your stool or persistent bowel changes?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Prostate Cancer",
+    "category": "Other",
+    "description": "Cancer that occurs in the prostate gland.",
+    "symptoms": [
+      "Difficulty urinating",
+      "Weak urine flow",
+      "Pelvic discomfort"
+    ],
+    "causes": "Genetic and age-related factors.",
+    "risk_factors": ["Age", "Family history"],
+    "prevention_tips": ["Regular screening"],
+    "when_to_seek_help": "Urinary difficulties.",
+    "image_url": "/images/prostate-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have difficulty or pain during urination?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Liver Cancer",
+    "category": "Other",
+    "description": "Cancer that begins in the liver cells.",
+    "symptoms": ["Abdominal pain", "Weight loss", "Jaundice"],
+    "causes": "Chronic liver disease, hepatitis.",
+    "risk_factors": ["Hepatitis infection", "Alcohol abuse"],
+    "prevention_tips": ["Avoid alcohol", "Hepatitis vaccination"],
+    "when_to_seek_help": "Persistent abdominal pain or jaundice.",
+    "image_url": "/images/liver-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have persistent upper abdominal pain or yellowing of skin?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Pancreatic Cancer",
+    "category": "Other",
+    "description": "Cancer that forms in the pancreas.",
+    "symptoms": ["Abdominal pain", "Weight loss", "Loss of appetite"],
+    "causes": "Genetic mutations, smoking.",
+    "risk_factors": ["Smoking", "Diabetes"],
+    "prevention_tips": ["Avoid smoking", "Healthy diet"],
+    "when_to_seek_help": "Unexplained weight loss and pain.",
+    "image_url": "/images/pancreatic-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced unexplained weight loss with abdominal pain?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Leukemia",
+    "category": "Other",
+    "description": "Cancer of the blood and bone marrow.",
+    "symptoms": ["Fatigue", "Frequent infections", "Easy bruising"],
+    "causes": "Abnormal white blood cell production.",
+    "risk_factors": ["Radiation exposure", "Genetic disorders"],
+    "prevention_tips": ["Avoid radiation exposure"],
+    "when_to_seek_help": "Persistent fatigue or infections.",
+    "image_url": "/images/leukemia.png",
+    "assessment_questions": [
+      {
+        "question": "Do you feel unusually tired with frequent infections?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Lymphoma",
+    "category": "Other",
+    "description": "Cancer of the lymphatic system.",
+    "symptoms": ["Swollen lymph nodes", "Fever", "Night sweats"],
+    "causes": "Abnormal lymphocyte growth.",
+    "risk_factors": ["Weak immune system"],
+    "prevention_tips": ["Healthy immune system"],
+    "when_to_seek_help": "Persistent lymph node swelling.",
+    "image_url": "/images/lymphoma.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed painless swelling of lymph nodes?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Brain Cancer",
+    "category": "Other",
+    "description": "Cancer that begins in the brain tissue.",
+    "symptoms": ["Headaches", "Seizures", "Vision problems"],
+    "causes": "Abnormal cell growth in brain.",
+    "risk_factors": ["Radiation exposure"],
+    "prevention_tips": ["Limit radiation exposure"],
+    "when_to_seek_help": "Persistent headaches or seizures.",
+    "image_url": "/images/brain-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have persistent headaches or new seizures?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Ovarian Cancer",
+    "category": "Other",
+    "description": "Cancer that begins in the ovaries.",
+    "symptoms": ["Abdominal bloating", "Pelvic pain", "Loss of appetite"],
+    "causes": "Genetic mutations.",
+    "risk_factors": ["Family history", "Age"],
+    "prevention_tips": ["Regular checkups"],
+    "when_to_seek_help": "Persistent bloating or pelvic pain.",
+    "image_url": "/images/ovarian-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience persistent bloating or pelvic discomfort?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Cervical Cancer",
+    "category": "Other",
+    "description": "Cancer that develops in the cervix.",
+    "symptoms": ["Abnormal vaginal bleeding", "Pelvic pain"],
+    "causes": "Human papillomavirus (HPV).",
+    "risk_factors": ["HPV infection"],
+    "prevention_tips": ["HPV vaccination", "Regular Pap tests"],
+    "when_to_seek_help": "Unusual vaginal bleeding.",
+    "image_url": "/images/cervical-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you experienced abnormal vaginal bleeding?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Thyroid Cancer",
+    "category": "Other",
+    "description": "Cancer that develops in the thyroid gland.",
+    "symptoms": ["Neck lump", "Hoarseness", "Difficulty swallowing"],
+    "causes": "Genetic mutations.",
+    "risk_factors": ["Radiation exposure"],
+    "prevention_tips": ["Regular neck exams"],
+    "when_to_seek_help": "New lump in the neck.",
+    "image_url": "/images/thyroid-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed a new lump in your neck?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Kidney Cancer",
+    "category": "Other",
+    "description": "Cancer that begins in the kidneys.",
+    "symptoms": ["Blood in urine", "Lower back pain", "Weight loss"],
+    "causes": "Genetic and environmental factors.",
+    "risk_factors": ["Smoking", "Obesity"],
+    "prevention_tips": ["Avoid smoking"],
+    "when_to_seek_help": "Blood in urine.",
+    "image_url": "/images/kidney-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Have you noticed blood in your urine?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Bladder Cancer",
+    "category": "Other",
+    "description": "Cancer that develops in the bladder lining.",
+    "symptoms": ["Blood in urine", "Painful urination"],
+    "causes": "Smoking, chemical exposure.",
+    "risk_factors": ["Smoking"],
+    "prevention_tips": ["Avoid smoking"],
+    "when_to_seek_help": "Blood in urine.",
+    "image_url": "/images/bladder-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have blood in urine or pain while urinating?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 4 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Oral Cancer",
+    "category": "Other",
+    "description": "Cancer that affects the mouth or throat.",
+    "symptoms": ["Mouth sores", "Difficulty swallowing", "Jaw pain"],
+    "causes": "Tobacco and alcohol use.",
+    "risk_factors": ["Smoking", "Alcohol use"],
+    "prevention_tips": ["Avoid tobacco", "Limit alcohol"],
+    "when_to_seek_help": "Persistent mouth sores.",
+    "image_url": "/images/oral-cancer.png",
+    "assessment_questions": [
+      {
+        "question": "Do you have mouth sores that are not healing?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 3 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Anemia",
+    "category": "Other",
+    "description": "A condition where the blood lacks enough healthy red blood cells.",
+    "symptoms": ["Fatigue", "Pale skin", "Shortness of breath"],
+    "causes": "Iron deficiency, chronic disease.",
+    "risk_factors": ["Poor diet", "Blood loss"],
+    "prevention_tips": ["Iron-rich diet"],
+    "when_to_seek_help": "Persistent fatigue or dizziness.",
+    "image_url": "/images/anemia.png",
+    "assessment_questions": [
+      {
+        "question": "Do you feel tired or short of breath with minimal effort?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Urinary Tract Infection (UTI)",
+    "category": "Other",
+    "description": "An infection in any part of the urinary system.",
+    "symptoms": [
+      "Burning during urination",
+      "Frequent urination",
+      "Cloudy urine"
+    ],
+    "causes": "Bacterial infection.",
+    "risk_factors": ["Poor hygiene", "Dehydration"],
+    "prevention_tips": ["Drink plenty of water", "Maintain hygiene"],
+    "when_to_seek_help": "Painful urination with fever.",
+    "image_url": "/images/uti.png",
+    "assessment_questions": [
+      {
+        "question": "Do you experience burning sensation while urinating?",
+        "type": "symptom",
+        "options": [
+          { "label": "No", "value": "no", "score": 0 },
+          { "label": "Yes", "value": "yes", "score": 2 }
+        ]
+      }
+    ]
+  }
+]
