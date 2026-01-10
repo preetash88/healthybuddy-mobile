@@ -196,7 +196,6 @@ export default function Diseases() {
                     </View>
                 </View>
 
-
                 {/* Disease Cards */}
                 <View style={{ marginTop: 24 }}>
                     {filteredDiseases.map((d: any, i: number) => (
@@ -204,7 +203,10 @@ export default function Diseases() {
                             key={i}
                             style={styles.card}
                             onPress={() =>
-                                router.push(`/diseases/${encodeURIComponent(d.name)}`)
+                                router.push({
+                                    pathname: "/diseases-details",
+                                    params: { name: d.name },
+                                })
                             }
                         >
                             <View>

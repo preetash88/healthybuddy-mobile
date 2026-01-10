@@ -196,7 +196,12 @@ export default function Emergency() {
                             <Pressable
                                 key={slug}
                                 style={styles.card}
-                                onPress={() => router.push(`/emergency/${slug}`)}
+                                onPress={() =>
+                                    router.push({
+                                        pathname: "/emergency-detail",
+                                        params: { slug },
+                                    })
+                                }
                             >
                                 <View style={styles.cardTopBar} />
 
@@ -236,7 +241,10 @@ export default function Emergency() {
                                     <Pressable
                                         style={styles.cardButton}
                                         onPress={() =>
-                                            router.push(`/emergency/${slug}`)
+                                            router.push({
+                                                pathname: "/emergency-detail",
+                                                params: { slug },
+                                            })
                                         }
                                     >
                                         <Text style={styles.cardButtonText}>
@@ -327,13 +335,11 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 20,
         borderBottomStartRadius: 20,
         marginBottom: 20,
-        // iOS shadow (same feel as HeroStats)
         shadowColor: '#101',
         shadowOpacity: 0.20,
         shadowRadius: 18,
         shadowOffset: { width: 0, height: 8 },
         elevation: 3,
-        // overflow: 'hidden',
     },
     cardTopBar: {
         height: 4,
