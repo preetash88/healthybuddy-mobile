@@ -1,162 +1,363 @@
-import { View, Text, ScrollView, Image, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  Pressable,
+  StyleSheet,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, router } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 import diseasesHub from "@/data/diseases1.json";
 
 export default function DiseasesDetails() {
-    const { name } = useLocalSearchParams();
-    const decodedName = decodeURIComponent(name as string);
+  const { name } = useLocalSearchParams();
+  const decodedName = decodeURIComponent(name as string);
 
-    const disease = diseasesHub.find((d) => d.name === decodedName);
+  const disease = diseasesHub.find((d) => d.name === decodedName);
 
-    if (!disease) {
-        return (
-            <View className="flex-1 items-center justify-center">
-                <Text className="text-xl font-bold">Disease not found</Text>
-                <Pressable onPress={() => router.replace("/diseases")}>
-                    <Text className="text-blue-600 mt-4">Back</Text>
-                </Pressable>
-            </View>
-        );
-    }
-
+  if (!disease) {
     return (
-        <ScrollView className="flex-1 bg-slate-50 px-4 pt-16">
-            {/* Back */}
-            <Pressable
-                onPress={() => router.replace("/diseases")}
-                className="flex-row items-center mb-6"
-            >
-                <Ionicons name="arrow-back" size={22} color="#6b7280" />
-                <Text className="ml-2 text-gray-500 font-semibold">
-                    Back to Diseases
-                </Text>
-            </Pressable>
+      <SafeAreaView style={styles.safe}>
+        <View style={styles.empty}>
+          <Text style={styles.emptyTitle}>Disease not found</Text>
+          <Pressable
+            onPress={() => router.replace("/diseases")}
+            style={styles.backButton}
+          >
+            <Ionicons name="arrow-back" size={18} color="#374151" />
+            <Text style={styles.backText}>Back to Diseases</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
+  return (
+    <SafeAreaView edges={["left", "right", "bottom"]} style={styles.safe}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        {/* Back */}
+        <Pressable
+          onPress={() => router.replace("/diseases")}
+          style={({ pressed }) => [
+            styles.backButton,
+            pressed && styles.backButtonPressed,
+          ]}
+        >
+          <Ionicons name="arrow-back" size={18} color="#374151" />
+          <Text style={styles.backText}>Back to Diseases</Text>
+        </Pressable>
+
+        <View style={styles.cardWrapper}>
+          <View style={styles.card}>
             {/* Image */}
             {disease.image_url && (
-                <Image
-                    source={{ uri: disease.image_url }}
-                    className="w-full h-56 rounded-2xl mb-6"
-                    resizeMode="cover"
-                />
+              <Image
+                source={{ uri: disease.image_url }}
+                style={styles.image}
+                resizeMode="cover"
+              />
             )}
 
-            {/* Category */}
-            <View className="self-start bg-gray-900 px-4 py-1.5 rounded-full mb-3">
-                <Text className="text-white text-xs font-semibold">
-                    {disease.category}
-                </Text>
-            </View>
+            <View style={styles.inner}>
+              {/* Category */}
+              <View style={styles.categoryPill}>
+                <Text style={styles.categoryText}>{disease.category}</Text>
+              </View>
 
-            {/* Title */}
-            <Text className="text-3xl font-bold text-gray-900 mb-2">
-                {disease.name}
-            </Text>
+              {/* Title */}
+              <Text style={styles.title}>{disease.name}</Text>
 
-            {/* Description */}
-            <Text className="text-gray-600 mb-6">
-                {disease.description}
-            </Text>
+              {/* Description */}
+              <Text style={styles.description}>{disease.description}</Text>
 
-            {/* CTAs */}
-            <View className="flex-row gap-4 mb-8">
+              {/* CTAs */}
+              <View style={styles.ctaRow}>
                 <Pressable
-                    onPress={() =>
-                        router.push({
-                            pathname: "/symptom-checker",
-                            params: { disease: disease.name },
-                        })
-                    }
-                    className="flex-1 bg-blue-600 py-3 rounded-xl items-center"
+                  style={styles.primaryBtn}
+                  onPress={() =>
+                    router.push({
+                      pathname: "/symptom-checker",
+                      params: { disease: disease.name },
+                    })
+                  }
                 >
-                    <Text className="text-white font-semibold">
-                        Take Assessment
-                    </Text>
+                  <Text style={styles.primaryBtnText}>Take Assessment</Text>
                 </Pressable>
 
                 <Pressable
-                    onPress={() => router.push("/clinics")}
-                    className="flex-1 border border-gray-300 py-3 rounded-xl items-center bg-white"
+                  style={styles.secondaryBtn}
+                  onPress={() => router.push("/clinics")}
                 >
-                    <Text className="font-medium text-gray-800">
-                        Find Clinics
-                    </Text>
+                  <Text style={styles.secondaryBtnText}>Find Clinics</Text>
                 </Pressable>
-            </View>
+              </View>
 
-            {/* Symptoms */}
-            <Section title="Common Symptoms">
+              {/* Sections */}
+              <InfoSection title="Common Symptoms">
                 {disease.symptoms.map((s, i) => (
-                    <Bullet key={i} text={s} />
+                  <Bullet key={i} text={s} />
                 ))}
-            </Section>
+              </InfoSection>
 
-            {/* Causes */}
-            {disease.causes && (
-                <Section title="Causes">
-                    <Text className="text-gray-700 text-sm">
-                        {disease.causes}
-                    </Text>
-                </Section>
-            )}
+              {disease.causes && (
+                <InfoSection title="Causes">
+                  <Text style={styles.sectionText}>{disease.causes}</Text>
+                </InfoSection>
+              )}
 
-            {/* Risk Factors */}
-            {disease.risk_factors?.length > 0 && (
-                <Section title="Risk Factors">
-                    {disease.risk_factors.map((r, i) => (
-                        <Bullet key={i} text={r} />
-                    ))}
-                </Section>
-            )}
+              {disease.risk_factors?.length > 0 && (
+                <InfoSection title="Risk Factors">
+                  {disease.risk_factors.map((r, i) => (
+                    <Bullet key={i} text={r} danger />
+                  ))}
+                </InfoSection>
+              )}
 
-            {/* Prevention */}
-            {disease.prevention_tips?.length > 0 && (
-                <View className="bg-green-50 border border-green-200 rounded-2xl p-5 mt-6">
-                    <Text className="text-green-700 font-semibold mb-3">
-                        Prevention Tips
-                    </Text>
-                    {disease.prevention_tips.map((p, i) => (
-                        <Bullet key={i} text={p} green />
-                    ))}
+              {disease.prevention_tips?.length > 0 && (
+                <View style={[styles.sectionCard, styles.greenCard]}>
+                  <Text style={styles.greenTitle}>Prevention Tips</Text>
+                  {disease.prevention_tips.map((p, i) => (
+                    <Bullet key={i} text={p} success />
+                  ))}
                 </View>
-            )}
+              )}
 
-            {/* When to seek help */}
-            {disease.when_to_seek_help && (
-                <View className="bg-red-50 border border-red-200 rounded-2xl p-5 mt-6 mb-16">
-                    <Text className="text-red-700 font-semibold mb-2">
-                        When to Seek Medical Help
-                    </Text>
-                    <Text className="text-red-700 text-sm">
-                        {disease.when_to_seek_help}
-                    </Text>
+              {disease.when_to_seek_help && (
+                <View style={[styles.sectionCard, styles.redCard]}>
+                  <Text style={styles.redTitle}>When to Seek Medical Help</Text>
+                  <Text style={styles.redText}>
+                    {disease.when_to_seek_help}
+                  </Text>
                 </View>
-            )}
-        </ScrollView>
-    );
-}
-
-/* ---------- UI Components ---------- */
-
-function Section({ title, children }) {
-    return (
-        <View className="bg-white border border-gray-200 rounded-2xl p-5 mt-6">
-            <Text className="font-semibold text-gray-900 mb-3">{title}</Text>
-            {children}
+              )}
+            </View>
+          </View>
         </View>
-    );
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
-function Bullet({ text, green = false }) {
-    return (
-        <View className="flex-row items-center mb-2">
-            <View
-                className={`w-2 h-2 rounded-full ${
-                    green ? "bg-green-600" : "bg-blue-600"
-                }`}
-            />
-            <Text className="ml-3 text-gray-700 text-sm">{text}</Text>
-        </View>
-    );
+/* ---------- Components ---------- */
+
+function InfoSection({ title, children }) {
+  return (
+    <View style={styles.sectionCard}>
+      <Text style={styles.sectionTitle}>{title}</Text>
+      {children}
+    </View>
+  );
 }
+
+function Bullet({ text, success = false, danger = false }) {
+  const color = success ? "#16A34A" : danger ? "#DC2626" : "#2563EB";
+
+  return (
+    <View style={styles.bulletRow}>
+      <View style={[styles.bulletDot, { backgroundColor: color }]} />
+      <Text style={styles.bulletText}>{text}</Text>
+    </View>
+  );
+}
+
+/* ---------- Styles ---------- */
+
+const styles = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: "#F8FAFC" },
+
+  scroll: {
+    paddingHorizontal: 12,
+    paddingTop: 16,
+    paddingBottom: 140,
+  },
+
+  backButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    backgroundColor: "#FFFFFF",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 14,
+    marginBottom: 16,
+
+    shadowColor: "#000",
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 4,
+
+    borderWidth: 1,
+    borderColor: "#E5E7EB",
+  },
+
+  backButtonPressed: {
+    opacity: 0.85,
+    transform: [{ scale: 0.97 }],
+  },
+
+  backText: {
+    marginLeft: 8,
+    fontWeight: "600",
+    color: "#374151",
+  },
+
+  cardWrapper: { paddingHorizontal: 2 },
+
+  card: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 20,
+    paddingVertical: 18,
+    paddingHorizontal: 18,
+    marginBottom: 18,
+
+    // iOS shadow (same feel as Diseases list cards)
+    shadowColor: "#101",
+    shadowOpacity: 0.2,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 8 },
+
+    // Android elevation
+    elevation: 10,
+  },
+
+  image: {
+    width: "100%",
+    height: 220,
+  },
+
+  inner: { padding: 20 },
+
+  categoryPill: {
+    alignSelf: "flex-start",
+    backgroundColor: "#111827",
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 900,
+    marginBottom: 10,
+  },
+
+  categoryText: {
+    color: "#FFFFFF",
+    fontSize: 12,
+    fontWeight: "700",
+  },
+
+  title: {
+    fontSize: 24,
+    fontWeight: "900",
+    marginBottom: 6,
+  },
+
+  description: {
+    color: "#6B7280",
+    marginBottom: 20,
+  },
+
+  ctaRow: {
+    flexDirection: "row",
+    gap: 12,
+    marginBottom: 24,
+  },
+
+  primaryBtn: {
+    flex: 1,
+    backgroundColor: "#4F46E5",
+    paddingVertical: 14,
+    borderRadius: 14,
+    alignItems: "center",
+  },
+
+  primaryBtnText: {
+    color: "white",
+    fontWeight: "700",
+  },
+
+  secondaryBtn: {
+    flex: 1,
+    backgroundColor: "#FFFFFF",
+    borderWidth: 1,
+    borderColor: "#E5E7EB",
+    paddingVertical: 14,
+    borderRadius: 14,
+    alignItems: "center",
+  },
+
+  secondaryBtnText: {
+    fontWeight: "600",
+    color: "#111827",
+  },
+
+  sectionCard: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 18,
+    padding: 16,
+    marginBottom: 16,
+  },
+
+  sectionTitle: {
+    fontWeight: "800",
+    marginBottom: 10,
+  },
+
+  sectionText: {
+    color: "#374151",
+  },
+
+  bulletRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+
+  bulletDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+  },
+
+  bulletText: {
+    marginLeft: 10,
+    color: "#374151",
+    flex: 1,
+  },
+
+  greenCard: {
+    backgroundColor: "#F0FDF4",
+    borderColor: "#BBF7D0",
+  },
+
+  greenTitle: {
+    color: "#15803D",
+    fontWeight: "800",
+    marginBottom: 10,
+  },
+
+  redCard: {
+    backgroundColor: "#FEF2F2",
+    borderColor: "#FECACA",
+  },
+
+  redTitle: {
+    color: "#B91C1C",
+    fontWeight: "800",
+    marginBottom: 6,
+  },
+
+  redText: {
+    color: "#7F1D1D",
+  },
+
+  empty: {
+    padding: 24,
+    alignItems: "center",
+  },
+
+  emptyTitle: {
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 12,
+  },
+});
