@@ -1,0 +1,38 @@
+{
+  "high": [
+    {
+      "name": "Meningitis",
+      "tag": "Neurological Conditions",
+      "description": "Headache with fever and neurological symptoms can indicate meningitis, which requires urgent care."
+    },
+    {
+      "name": "Severe Viral Infection",
+      "tag": "Infectious Diseases",
+      "description": "High fever and systemic symptoms may suggest a serious viral illness."
+    }
+  ],
+  "moderate": [
+    {
+      "name": "Viral Infection (e.g., Influenza)",
+      "tag": "Infectious Diseases",
+      "description": "Common cause of headache, fever, and fatigue."
+    },
+    {
+      "name": "Bacterial Sinusitis",
+      "tag": "Respiratory Conditions",
+      "description": "Headache combined with fever could indicate a sinus infection."
+    }
+  ],
+  "low": [
+    {
+      "name": "Common Cold",
+      "tag": "Respiratory Conditions",
+      "description": "Mild symptoms like cough, sore throat, and runny nose."
+    },
+    {
+      "name": "Tension Headache",
+      "tag": "Headaches",
+      "description": "Stress-related headaches with mild systemic symptoms."
+    }
+  ]
+}

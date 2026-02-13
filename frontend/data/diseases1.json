@@ -1,0 +1,278 @@
+[
+  {
+    "name": "Acid Reflux (GERD)",
+    "category": "Digestive",
+    "description": "A digestive disorder where stomach acid frequently flows back into the food pipe, causing irritation.",
+    "symptoms": [
+      "Burning sensation in chest (heartburn)",
+      "Chest pain",
+      "Difficulty swallowing",
+      "Regurgitation of food or sour liquid"
+    ],
+    "causes": "Weak lower esophageal sphincter allowing acid reflux.",
+    "risk_factors": ["Obesity", "Smoking", "Pregnancy", "Eating large meals"],
+    "prevention_tips": [
+      "Avoid spicy foods",
+      "Eat smaller meals",
+      "Avoid lying down after eating",
+      "Maintain healthy weight"
+    ],
+    "when_to_seek_help": "Seek medical advice if symptoms persist or worsen.",
+    "assessment_questions": []
+  },
+  {
+    "name": "Acne",
+    "category": "Skin",
+    "description": "A skin condition that occurs when hair follicles become clogged with oil and dead skin cells.",
+    "symptoms": [
+      "Whiteheads",
+      "Blackheads",
+      "Small red bumps",
+      "Painful pimples"
+    ],
+    "causes": "Excess oil production and bacterial infection.",
+    "risk_factors": [
+      "Hormonal changes",
+      "Stress",
+      "Oily skin",
+      "Certain medications"
+    ],
+    "prevention_tips": [
+      "Clean skin gently",
+      "Avoid touching face frequently",
+      "Use non-comedogenic products"
+    ],
+    "when_to_seek_help": "Consult a dermatologist if acne is severe or persistent.",
+    "image_url": "../public/images/acne.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Allergic Rhinitis",
+    "category": "Respiratory",
+    "description": "An allergic reaction causing sneezing, congestion, and itchy eyes, commonly known as hay fever.",
+    "symptoms": [
+      "Runny or stuffy nose",
+      "Sneezing",
+      "Itchy eyes",
+      "Watery eyes"
+    ],
+    "causes": "Exposure to allergens such as pollen, dust mites, or pet dander.",
+    "risk_factors": [
+      "Family history of allergies",
+      "Exposure to allergens",
+      "Asthma"
+    ],
+    "prevention_tips": [
+      "Avoid allergens",
+      "Use air purifiers",
+      "Keep windows closed during pollen season"
+    ],
+    "when_to_seek_help": "See a doctor if symptoms interfere with daily life.",
+    "image_url": "../public/images/allergic.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Alzheimer's Disease",
+    "category": "Neurological",
+    "description": "A progressive neurological disorder that causes memory loss and cognitive decline.",
+    "symptoms": [
+      "Memory loss affecting daily life",
+      "Confusion",
+      "Difficulty solving problems",
+      "Disorientation"
+    ],
+    "causes": "Abnormal buildup of proteins in the brain.",
+    "risk_factors": ["Age", "Family history", "Genetics"],
+    "prevention_tips": [
+      "Mental stimulation",
+      "Healthy diet",
+      "Regular exercise"
+    ],
+    "when_to_seek_help": "If memory loss interferes with daily activities.",
+    "image_url": "../public/images/alzheimers.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Anemia",
+    "category": "Other",
+    "description": "A condition where the body lacks enough healthy red blood cells.",
+    "symptoms": ["Fatigue", "Weakness", "Pale skin", "Shortness of breath"],
+    "causes": "Iron deficiency or chronic disease.",
+    "risk_factors": ["Poor diet", "Blood loss", "Pregnancy"],
+    "prevention_tips": ["Iron-rich diet", "Vitamin supplementation"],
+    "when_to_seek_help": "If fatigue or weakness persists.",
+    "image_url": "../public/images/anemia.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Anxiety Disorder",
+    "category": "Mental Health",
+    "description": "A mental health condition characterized by excessive fear or worry.",
+    "symptoms": [
+      "Excessive worry",
+      "Restlessness",
+      "Fatigue",
+      "Difficulty concentrating"
+    ],
+    "causes": "Combination of genetic and environmental factors.",
+    "risk_factors": ["Stress", "Family history", "Trauma"],
+    "prevention_tips": ["Stress management", "Therapy", "Mindfulness"],
+    "when_to_seek_help": "If anxiety interferes with daily life.",
+    "image_url": "../public/images/anxiety.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Arthritis",
+    "category": "Musculoskeletal",
+    "description": "Inflammation of joints causing pain and stiffness.",
+    "symptoms": ["Joint pain", "Stiffness", "Swelling", "Reduced flexibility"],
+    "causes": "Wear and tear or autoimmune response.",
+    "risk_factors": ["Age", "Obesity", "Joint injury"],
+    "prevention_tips": ["Regular exercise", "Weight management"],
+    "when_to_seek_help": "If joint pain limits movement.",
+    "image_url": "../public/images/arthritis.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Asthma",
+    "category": "Respiratory",
+    "description": "A chronic condition where airways become inflamed and narrow.",
+    "symptoms": [
+      "Shortness of breath",
+      "Wheezing",
+      "Chest tightness",
+      "Coughing"
+    ],
+    "causes": "Inflammation triggered by allergens or irritants.",
+    "risk_factors": ["Allergies", "Family history", "Air pollution"],
+    "prevention_tips": ["Avoid triggers", "Use inhalers as prescribed"],
+    "when_to_seek_help": "If breathing becomes difficult.",
+    "image_url": "../public/images/asthma.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Back Pain",
+    "category": "Musculoskeletal",
+    "description": "Pain in the lower, middle, or upper back.",
+    "symptoms": ["Muscle ache", "Sharp pain", "Limited flexibility"],
+    "causes": "Muscle strain or spinal issues.",
+    "risk_factors": ["Poor posture", "Sedentary lifestyle"],
+    "prevention_tips": ["Exercise", "Proper posture"],
+    "when_to_seek_help": "If pain persists for weeks.",
+    "image_url": "../public/images/backpain.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Bronchitis",
+    "category": "Respiratory",
+    "description": "Inflammation of the bronchial tubes.",
+    "symptoms": ["Cough", "Mucus production", "Fatigue", "Chest discomfort"],
+    "causes": "Viral or bacterial infection.",
+    "risk_factors": ["Smoking", "Air pollution"],
+    "prevention_tips": ["Avoid smoke", "Practice hygiene"],
+    "when_to_seek_help": "If cough lasts more than 3 weeks.",
+    "image_url": "../public/images/bronchitis.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "COPD",
+    "category": "Respiratory",
+    "description": "A group of lung diseases causing airflow blockage.",
+    "symptoms": ["Chronic cough", "Shortness of breath", "Mucus production"],
+    "causes": "Long-term exposure to lung irritants.",
+    "risk_factors": ["Smoking", "Occupational dust"],
+    "prevention_tips": ["Quit smoking", "Avoid pollutants"],
+    "when_to_seek_help": "If breathing worsens.",
+    "image_url": "../public/images/copd.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Coronary Artery Disease",
+    "category": "Cardiovascular",
+    "description": "A condition caused by narrowed heart arteries.",
+    "symptoms": ["Chest pain", "Shortness of breath", "Fatigue"],
+    "causes": "Plaque buildup in arteries.",
+    "risk_factors": ["High cholesterol", "Smoking", "Diabetes"],
+    "prevention_tips": ["Healthy diet", "Exercise"],
+    "when_to_seek_help": "If chest pain occurs.",
+    "image_url": "../public/images/cad.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Depression",
+    "category": "Mental Health",
+    "description": "A mood disorder causing persistent sadness.",
+    "symptoms": ["Low mood", "Loss of interest", "Fatigue", "Sleep changes"],
+    "causes": "Chemical imbalance and life stress.",
+    "risk_factors": ["Trauma", "Family history"],
+    "prevention_tips": ["Counseling", "Social support"],
+    "when_to_seek_help": "If symptoms persist over 2 weeks.",
+    "image_url": "../public/images/depression.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Diabetes Type 2",
+    "category": "Metabolic",
+    "description": "A chronic condition affecting blood sugar regulation.",
+    "symptoms": [
+      "Increased thirst",
+      "Frequent urination",
+      "Fatigue",
+      "Blurred vision"
+    ],
+    "causes": "Insulin resistance.",
+    "risk_factors": ["Obesity", "Family history"],
+    "prevention_tips": ["Healthy diet", "Regular exercise"],
+    "when_to_seek_help": "If blood sugar remains high.",
+    "image_url": "../public/images/diabetes.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Hypertension",
+    "category": "Cardiovascular",
+    "description": "Persistently high blood pressure.",
+    "symptoms": ["Often asymptomatic", "Headaches", "Dizziness"],
+    "causes": "Lifestyle and genetic factors.",
+    "risk_factors": ["High salt intake", "Stress"],
+    "prevention_tips": ["Low-sodium diet", "Exercise"],
+    "when_to_seek_help": "If blood pressure stays elevated.",
+    "image_url": "../public/images/hypertension.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Migraine",
+    "category": "Neurological",
+    "description": "A neurological condition causing severe headaches.",
+    "symptoms": ["Throbbing headache", "Nausea", "Light sensitivity"],
+    "causes": "Changes in brain chemicals.",
+    "risk_factors": ["Stress", "Hormonal changes"],
+    "prevention_tips": ["Avoid triggers", "Adequate sleep"],
+    "when_to_seek_help": "If headaches are frequent or severe.",
+    "image_url": "../public/images/migraine.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Pneumonia",
+    "category": "Respiratory",
+    "description": "An infection that inflames air sacs in the lungs.",
+    "symptoms": ["Cough with phlegm", "Fever", "Chest pain"],
+    "causes": "Bacterial or viral infection.",
+    "risk_factors": ["Weakened immunity", "Smoking"],
+    "prevention_tips": ["Vaccination", "Hand hygiene"],
+    "when_to_seek_help": "If breathing becomes difficult.",
+    "image_url": "../public/images/pneumonia.jpeg",
+    "assessment_questions": []
+  },
+  {
+    "name": "Stroke",
+    "category": "Neurological",
+    "description": "A medical emergency caused by interrupted blood flow to the brain.",
+    "symptoms": ["Sudden numbness", "Speech difficulty", "Vision problems"],
+    "causes": "Blocked or ruptured blood vessel.",
+    "risk_factors": ["Hypertension", "Smoking"],
+    "prevention_tips": ["Blood pressure control", "Healthy lifestyle"],
+    "when_to_seek_help": "Immediately if symptoms appear.",
+    "image_url": "../public/images/stroke.jpeg",
+    "assessment_questions": []
+  }
+]
