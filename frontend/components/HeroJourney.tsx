@@ -185,88 +185,99 @@ export default function HeroJourney({ scrollY }: Props) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        minHeight: height,
-        justifyContent: "center",
-        overflow: "hidden",
-    },
-    visualLayer: {
-        ...StyleSheet.absoluteFillObject,
-    },
-    gradient1: {
-        position: "absolute",
-        width: 800,
-        height: 800,
-        borderRadius: 400,
-        backgroundColor: "rgba(0,200,255,0.2)",
-        top: -300,
-        left: -200,
-    },
-    gradient2: {
-        position: "absolute",
-        width: 600,
-        height: 600,
-        borderRadius: 300,
-        backgroundColor: "rgba(255,0,200,0.15)",
-        bottom: -200,
-        right: -100,
-    },
-    heroImage: {
-        width: width,
-        height: height,
-        opacity: 0.9,
-    },
-    content: {
-        paddingHorizontal: 24,
-        alignItems: "center",
-    },
-    badge: {
-        paddingHorizontal: 14,
-        paddingVertical: 6,
-        borderRadius: 20,
-        backgroundColor: "rgba(255,255,255,0.1)",
-        marginBottom: 30,
-    },
-    badgeText: {
-        color: "#fff",
-        fontWeight: "600",
-    },
-    heading: {
-        fontSize: 36,
-        fontWeight: "800",
-        color: "#fff",
-        textAlign: "center",
-        lineHeight: 44,
-    },
-    highlight: {
-        color: "#34D399",
-    },
-    description: {
-        marginTop: 16,
-        fontSize: 16,
-        color: "#ddd",
-        textAlign: "center",
-    },
-    ctaContainer: {
-        marginTop: 24,
-    },
-    ctaButton: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 8,
-        paddingHorizontal: 24,
-        paddingVertical: 14,
-        borderRadius: 20,
-        backgroundColor: "#fff",
-    },
-    ctaText: {
-        fontWeight: "700",
-    },
-    bottomFade: {
-        position: "absolute",
-        bottom: 0,
-        height: 120,
-        width: "100%",
-        backgroundColor: "rgba(0,0,0,0.3)",
-    },
+  container: {
+    minHeight: height,
+    justifyContent: "flex-start",
+    overflow: "hidden",
+    backgroundColor: "#121418",
+  },
+  visualLayer: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  gradient1: {
+    position: "absolute",
+    width: 800,
+    height: 800,
+    borderRadius: 400,
+    backgroundColor: "rgba(0,200,255,0.15)",
+    top: -300,
+    left: -200,
+  },
+  gradient2: {
+    position: "absolute",
+    width: 600,
+    height: 600,
+    borderRadius: 300,
+    backgroundColor: "rgba(255,0,200,0.1)",
+    bottom: -200,
+    right: -100,
+  },
+  heroImage: {
+    // CHANGED: Make width 150% of screen width to allow shifting
+    width: width * 1.8,
+    height: height,
+    position: "absolute",
+    opacity: 0.9,
+    top: 0,
+
+    // ADDED: Shift the image to the left.
+    // A negative translateX pulls the right side of the image into view.
+    // Adjust "-150" to whatever number centers your device perfectly.
+    right: -10,
+  },
+  content: {
+    paddingHorizontal: 24,
+    alignItems: "center",
+    paddingTop: height * 0.1,
+  },
+  badge: {
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 20,
+    backgroundColor: "rgba(255,255,255,0.1)",
+    marginBottom: 30,
+  },
+  badgeText: {
+    color: "#fff",
+    fontWeight: "600",
+  },
+  heading: {
+    fontSize: 36,
+    fontWeight: "800",
+    color: "#fff",
+    textAlign: "center",
+    lineHeight: 44,
+  },
+  highlight: {
+    color: "#34D399",
+  },
+  description: {
+    marginTop: 16,
+    fontSize: 16,
+    color: "#ddd",
+    textAlign: "center",
+    maxWidth: 300,
+  },
+  ctaContainer: {
+    marginTop: 24,
+  },
+  ctaButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingHorizontal: 24,
+    paddingVertical: 14,
+    borderRadius: 20,
+    backgroundColor: "#fff",
+  },
+  ctaText: {
+    fontWeight: "700",
+  },
+  bottomFade: {
+    position: "absolute",
+    bottom: 0,
+    height: 120,
+    width: "100%",
+    backgroundColor: "rgba(0,0,0,0.4)",
+  },
 });

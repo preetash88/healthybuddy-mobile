@@ -23,7 +23,8 @@ import Animated, {
     runOnJS,
 } from "react-native-reanimated";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
-import {StatusBar} from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
+import { BlurView } from "expo-blur"; // IMPORT THIS
 
 const {width} = Dimensions.get("window");
 
@@ -118,7 +119,7 @@ export default function Navbar() {
         }
         closeLang();
     };
-    const callNumber = (number) => {
+    const callNumber = (number:string) => {
         Linking.openURL(`tel:${number}`);
         closeEmergency();
     };
@@ -127,236 +128,258 @@ export default function Navbar() {
     const currentLang = i18n.language ? i18n.language.toUpperCase() : "EN";
 
     return (
-        <View
+      <View
+        style={[
+          styles.container,
+          { paddingTop: insets.top },
+          isDark && styles.darkContainer,
+        ]}
+      >
+        {/* FIX 1: Make status bar transparent so image shows through the top edge */}
+        <StatusBar
+          style="light"
+          translucent={true}
+          backgroundColor="transparent"
+        />
+
+        {/* Logo */}
+        <TouchableOpacity onPress={() => router.push("/")}>
+          <View style={styles.logoWrapper}>
+            <Image
+              source={require("../../assets/images/app_logo.png")}
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
+            <Text style={[styles.logoText, isDark && styles.darkText]}>
+              Rurivia.AI
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <View style={styles.rightSection}>
+          {/* Language */}
+          <TouchableOpacity
+            style={styles.langButton}
+            onPress={langVisible ? closeLang : openLang}
+          >
+            <Text style={[styles.langText, isDark && styles.darkText]}>
+              {currentLang}
+            </Text>
+            <Animated.View style={chevronStyle}>
+              <MaterialIcons
+                name="expand-more"
+                size={22}
+                color={isDark ? "#fff" : "#000"}
+              />
+            </Animated.View>
+          </TouchableOpacity>
+
+          {/* Theme Icon (system-based) */}
+          <Animated.View style={themeStyle}>
+            <MaterialIcons
+              name={isDark ? "dark-mode" : "light-mode"}
+              size={24}
+              color={isDark ? "#fff" : "#000"}
+            />
+          </Animated.View>
+
+          {/* Emergency */}
+          <TouchableOpacity
+            onPress={emergencyVisible ? closeEmergency : openEmergency}
+          >
+            <MaterialIcons name="phone" size={24} color="#ff3b30" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Backdrop - Using Ternary (? :) to prevent false rendering */}
+        {langVisible || emergencyVisible ? (
+          <Pressable
+            style={styles.backdrop}
+            onPress={() => {
+              closeLang();
+              closeEmergency();
+            }}
+          />
+        ) : null}
+
+        {/* Language Dropdown */}
+        {langVisible ? (
+          <Animated.View
             style={[
-                styles.container,
-                { paddingTop: insets.top },
-                isDark && styles.darkContainer,
+              styles.langDropdown,
+              langStyle,
+              isDark && styles.darkDropdown,
             ]}
-        >
-            <StatusBar style={isDark ? "light" : "dark"}/>
-
-            {/* Logo */}
-            <TouchableOpacity onPress={() => router.push("/")}>
-                <View style={styles.logoWrapper}>
-                    <Image
-                        source={require("../../assets/images/app_logo.png")}
-                        style={styles.logoImage}
-                        resizeMode="contain"
-                    />
-                    <Text style={[styles.logoText, isDark && styles.darkText]}>
-                        Rurivia.AI
-                    </Text>
-                </View>
-            </TouchableOpacity>
-
-            <View style={styles.rightSection}>
-                {/* Language */}
+          >
+            {memoLanguages.map((lang) => {
+              const isSelected = lang.code === i18n.language;
+              return (
                 <TouchableOpacity
-                    style={styles.langButton}
-                    onPress={langVisible ? closeLang : openLang}
+                  key={lang.code}
+                  style={[
+                    styles.dropdownItem,
+                    isSelected && {
+                      backgroundColor: isDark
+                        ? "rgba(255,255,255,0.10)"
+                        : "#f1f5f9",
+                    },
+                  ]}
+                  onPress={() => changeLanguage(lang.code)}
                 >
-                    <Text style={[styles.langText, isDark && styles.darkText]}>
-                        {currentLang}
+                  <View style={styles.dropdownRow}>
+                    <Text style={isDark ? styles.darkText : styles.lightText}>
+                      {lang.label}
                     </Text>
-                    <Animated.View style={chevronStyle}>
-                        <MaterialIcons
-                            name="expand-more"
-                            size={22}
-                            color={isDark ? "#fff" : "#000"}
-                        />
-                    </Animated.View>
+                    {isSelected ? (
+                      <MaterialIcons
+                        name="check"
+                        size={18}
+                        color={isDark ? "#4ade80" : "#16a34a"}
+                      />
+                    ) : null}
+                  </View>
                 </TouchableOpacity>
+              );
+            })}
+          </Animated.View>
+        ) : null}
 
-                {/* Theme Icon (system-based) */}
-                <Animated.View style={themeStyle}>
-                    <MaterialIcons
-                        name={isDark ? "dark-mode" : "light-mode"}
-                        size={24}
-                        color={isDark ? "#fff" : "#000"}
-                    />
-                </Animated.View>
-
-                {/* Emergency */}
-                <TouchableOpacity
-                    onPress={emergencyVisible ? closeEmergency : openEmergency}
-                >
-                    <MaterialIcons name="phone" size={24} color="#ff3b30"/>
-                </TouchableOpacity>
-            </View>
-
-            {/* Backdrop - Using Ternary (? :) to prevent false rendering */}
-            {(langVisible || emergencyVisible) ? (
-                <Pressable
-                    style={styles.backdrop}
-                    onPress={() => {
-                        closeLang();
-                        closeEmergency();
-                    }}
-                />
-            ) : null}
-
-            {/* Language Dropdown */}
-            {langVisible ? (
-                <Animated.View
-                    style={[styles.langDropdown, langStyle, isDark && styles.darkDropdown,]}
-                >
-                    {memoLanguages.map((lang) => {
-                        const isSelected = lang.code === i18n.language;
-                        return (
-                            <TouchableOpacity
-                                key={lang.code}
-                                style={[
-                                    styles.dropdownItem,
-                                    isSelected && {
-                                        backgroundColor: isDark
-                                            ? "rgba(255,255,255,0.10)"
-                                            : "#f1f5f9"
-                                    },
-                                ]}
-                                onPress={() => changeLanguage(lang.code)}
-                            >
-                                <View style={styles.dropdownRow}>
-                                    <Text style={isDark ? styles.darkText : styles.lightText}>
-                                        {lang.label}
-                                    </Text>
-                                    {isSelected ? (
-                                        <MaterialIcons
-                                            name="check"
-                                            size={18}
-                                            color={isDark ? "#4ade80" : "#16a34a"}
-                                        />
-                                    ):null}
-                                </View>
-                            </TouchableOpacity>
-                        );
-                    })}
-                </Animated.View>
-            ):null}
-
-            {/* Emergency Dropdown */}
-            {emergencyVisible ? (
-                <Animated.View style={[
-                    styles.emerDropdown,
-                    emergencyStyle,
-                    isDark && styles.darkDropdown,
-                ]}
-                >
-                    {memoEmergencyNumbers.map((item) => (
-                        <TouchableOpacity
-                            key={item.number}
-                            style={styles.dropdownItem}
-                            onPress={() => callNumber(item.number)}
-                        >
-                            <Text style={isDark ? styles.darkText : styles.lightText}>
-                                {item.label} ({item.number})
-                            </Text>
-                        </TouchableOpacity>))}
-                </Animated.View>):null}
-        </View>);
+        {/* Emergency Dropdown */}
+        {emergencyVisible ? (
+          <Animated.View
+            style={[
+              styles.emerDropdown,
+              emergencyStyle,
+              isDark && styles.darkDropdown,
+            ]}
+          >
+            {memoEmergencyNumbers.map((item) => (
+              <TouchableOpacity
+                key={item.number}
+                style={styles.dropdownItem}
+                onPress={() => callNumber(item.number)}
+              >
+                <Text style={isDark ? styles.darkText : styles.lightText}>
+                  {item.label} ({item.number})
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </Animated.View>
+        ) : null}
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        minHeight: 100,
-        backgroundColor: "#fff",
-        paddingHorizontal: 16,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        elevation: 10,
-        overflow: "visible",
-        zIndex: 100,
-    },
-    darkContainer: {
-        backgroundColor: "#121418",
-    },
-    logoWrapper: {
-        flexDirection: "row",
-        alignItems: "center",
-    },
-    logoImage: {
-        width: 40,
-        height: 40,
-        marginRight: 8,
-    },
-    logoText: {
-        fontSize: 22,
-        fontWeight: "700",
-    },
-    rightSection: {
-        flexDirection: "row", alignItems: "center", gap: 16, marginRight: 4,
-    },
-    langButton: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 4,
-    },
-    langText: {
-        fontWeight: "600",
-    },
-    // dropdown: {
-    //     position: "absolute",
-    //     top: 101,
-    //     right: 16,
-    //     minWidth: 100,
-    //     maxWidth: 240,
-    //     borderRadius: 10,
-    //     paddingVertical: 4,
-    //     elevation: 20,
-    //     backgroundColor: "#fff",
-    //     zIndex: 9999,
-    // },
-    langDropdown: {
-        position: "absolute",
-        top: 101,
-        right: 46,
-        minWidth: 100,
-        maxWidth: 160,
-        borderRadius: 10,
-        paddingVertical: 4,
-        elevation: 20,
-        backgroundColor: "#fff",
-        zIndex: 9999,
-    },
-    emerDropdown: {
-        position: "absolute",
-        top: 101,
-        right: 16,
-        minWidth: 100,
-        maxWidth: 300,
-        borderRadius: 10,
-        paddingVertical: 4,
-        elevation: 20,
-        backgroundColor: "#fff",
-        zIndex: 9999,
-    },
-    darkDropdown: {
-        backgroundColor: "#1a1f27",
-    },
-    dropdownRow: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-    },
-    dropdownItem: {
-        paddingVertical: 10,
-        paddingHorizontal: 10,
-        borderRadius: 10,
-        marginHorizontal: 4,
-    },
-    backdrop: {
-        position: "absolute",
-        top: 90,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 50,
-    },
-    darkText: {
-        color: "#fff",
-    },
-    lightText: {
-        color: "#000",
-    },
+  container: {
+    backgroundColor: "rgba(23, 25, 30, 0.4)",
+
+    // ADDED: Absolute positioning to float over the Hero
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+
+    paddingHorizontal: 16,
+    paddingBottom: 12, // Add a little bottom padding for spacing
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+
+    // CHANGED: Removed elevation to remove the shadow line
+    // elevation: 10,
+    zIndex: 100,
+  },
+  darkContainer: {
+    backgroundColor: "transparent",
+  },
+  logoWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  logoImage: {
+    width: 40,
+    height: 40,
+    marginRight: 8,
+  },
+  logoText: {
+    fontSize: 22,
+    fontWeight: "700",
+    // OPTIONAL: Force white text if the image is always dark
+    color: "#fff",
+    textShadowColor: "rgba(0, 0, 0, 0.3)", // Adds readability over images
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  rightSection: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 16,
+    marginRight: 4,
+  },
+  langButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+  },
+  langText: {
+    fontWeight: "600",
+    // OPTIONAL: Force white text
+    color: "#fff",
+    textShadowColor: "rgba(0, 0, 0, 0.3)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  langDropdown: {
+    position: "absolute",
+    top: 80,
+    right: 46,
+    minWidth: 100,
+    maxWidth: 160,
+    borderRadius: 10,
+    paddingVertical: 4,
+    elevation: 20,
+    backgroundColor: "#fff",
+    zIndex: 9999,
+  },
+  emerDropdown: {
+    position: "absolute",
+    top: 80,
+    right: 16,
+    minWidth: 100,
+    maxWidth: 300,
+    borderRadius: 10,
+    paddingVertical: 4,
+    elevation: 20,
+    backgroundColor: "#fff",
+    zIndex: 9999,
+  },
+  darkDropdown: {
+    backgroundColor: "#1a1f27",
+  },
+  dropdownRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  dropdownItem: {
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    marginHorizontal: 4,
+  },
+  backdrop: {
+    position: "absolute",
+    top: 0, // Cover entire screen
+    left: 0,
+    right: 0,
+    bottom: -1000, // Extend to bottom
+    zIndex: 50,
+  },
+  darkText: {
+    color: "#fff",
+  },
+  lightText: {
+    color: "#000",
+  },
 });
