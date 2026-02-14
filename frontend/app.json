@@ -12,7 +12,7 @@
       "supportsTablet": true
     },
     "android": {
-      "backgroundColor": "#00000000",
+      "backgroundColor": "#0F1419",
       "statusBar": {
         "translucent": true,
         "backgroundColor": "transparent"
