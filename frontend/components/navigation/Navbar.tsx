@@ -7,6 +7,7 @@ import {
   Modal,
   Pressable,
   Platform,
+  Image,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -36,7 +37,14 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
 
       {/* Header */}
       <View style={[styles.container, { backgroundColor: colors.background }]}>
-        <Text style={[styles.title, { color: colors.title }]}>{title}</Text>
+        <View style={styles.leftSection}>
+          <Image
+            source={require("../../assets/images/app_logo.png")} // adjust path if needed
+            style={styles.logo}
+            resizeMode="contain"
+          />
+          <Text style={[styles.title, { color: colors.title }]}>{title}</Text>
+        </View>
 
         <TouchableOpacity
           activeOpacity={0.7}
@@ -126,7 +134,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   title: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: Platform.OS === "ios" ? "600" : "700",
     letterSpacing: 0.3,
   },
@@ -163,5 +171,15 @@ const styles = StyleSheet.create({
   menuText: {
     fontSize: 16,
     fontWeight: "300",
+  },
+  leftSection: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  logo: {
+    width: 28,
+    height: 28,
+    marginRight: 10,
   },
 });
