@@ -9,12 +9,14 @@ import {
   Platform,
   Image,
   ScrollView,
-  Linking,
+    Linking,
+  StatusBar
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useTheme } from "../../context/ThemeContext";
+import { BlurView } from "expo-blur";
 
 type Props = {
   title?: string;
@@ -47,141 +49,213 @@ const AppNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
   const colors = isDark ? darkColors : lightColors;
 
   return (
-    <SafeAreaView
-      edges={["top"]}
-      style={[styles.safeArea, { backgroundColor: colors.background }]}
-    >
-      <StatusBar style={isDark ? "light" : "dark"} />
+    <View style={[styles.absoluteWrapper]}>
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle={isDark ? "light-content" : "dark-content"}
+      />
 
-      {/* Header */}
-      <View style={[styles.container, { backgroundColor: colors.background }]}>
-        <View style={styles.leftSection}>
-          <Image
-            source={require("../../assets/images/app_logo.png")} // adjust path if needed
-            style={styles.logo}
-            resizeMode="contain"
-          />
-          <Text style={[styles.title, { color: colors.title }]}>{title}</Text>
-        </View>
-
-        <View style={styles.rightSection}>
-          {/* Emergency Button */}
-          <TouchableOpacity
-            activeOpacity={0.8}
-            style={styles.emergencyButton}
-            onPress={() => setEmergencyVisible(true)}
-          >
-            <MaterialCommunityIcons name="phone" size={20} color="#f20f0f" />
-          </TouchableOpacity>
-
-          {/* Three Dots */}
-          <TouchableOpacity
-            activeOpacity={0.7}
-            onPress={() => setMenuVisible(true)}
-            style={styles.menuButton}
-          >
-            <MaterialCommunityIcons
-              name="dots-vertical"
-              size={24}
-              color={colors.icon}
-            />
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      {/* Dropdown Menu */}
-      <Modal
-        transparent
-        animationType="fade"
-        visible={menuVisible}
-        onRequestClose={() => setMenuVisible(false)}
+      <BlurView
+        intensity={90}
+        tint={isDark ? "dark" : "light"}
+        style={[
+          styles.glassBackground,
+          isDark ? styles.darkGlass : styles.lightGlass,
+        ]}
       >
-        <Pressable style={styles.overlay} onPress={() => setMenuVisible(false)}>
-          <View
-            style={[
-              styles.menuContainer,
-              { backgroundColor: colors.menuBackground },
-            ]}
-          >
+        {/* Safe area padding only */}
+        <SafeAreaView
+          edges={["top"]}
+          style={{ backgroundColor: "transparent" }}
+        />
+
+        {/* Actual Navbar */}
+        <View style={styles.container}>
+          <View style={styles.leftSection}>
+            <Image
+              source={require("../../assets/images/app_logo.png")}
+              style={[styles.logo, !isDark && styles.logoLightContrast]}
+              resizeMode="contain"
+            />
+            <Text style={[styles.title, { color: colors.title }]}>{title}</Text>
+          </View>
+
+          <View style={styles.rightSection}>
+            {/* Emergency Button */}
             <TouchableOpacity
-              style={styles.menuItem}
-              onPress={() => {
-                toggleTheme();
-                setMenuVisible(false);
-              }}
+              activeOpacity={0.8}
+              style={styles.emergencyButton}
+              onPress={() => setEmergencyVisible(true)}
             >
-              <MaterialCommunityIcons
-                name={isDark ? "weather-sunny" : "weather-night"}
-                size={20}
-                color={colors.menuText}
-                style={{ marginRight: 14 }}
-              />
-              <Text style={[styles.menuText, { color: colors.menuText }]}>
-                {isDark ? "Day Mode" : "Night Mode"}
-              </Text>
+              <MaterialCommunityIcons name="phone" size={20} color="#f20f0f" />
             </TouchableOpacity>
 
-            <View
-              style={{
-                height: 1,
-                backgroundColor: colors.divider,
-                marginVertical: 4,
-              }}
-            />
-
+            {/* Three Dots */}
             <TouchableOpacity
-              style={styles.menuItem}
-              onPress={() => {
-                setMenuVisible(false);
-                setLanguageVisible(true);
-              }}
+              activeOpacity={0.7}
+              onPress={() => setMenuVisible(true)}
+              style={styles.menuButton}
             >
               <MaterialCommunityIcons
-                name="translate"
-                size={20}
-                color={colors.menuText}
-                style={{ marginRight: 14 }}
-              />
-              <Text
-                style={[styles.menuText, { color: colors.menuText, flex: 1 }]}
-              >
-                Lang ({selectedLanguage.code})
-              </Text>
-              <MaterialCommunityIcons
-                name="chevron-right"
-                size={20}
-                color={colors.menuText}
+                name="dots-vertical"
+                size={24}
+                color={colors.icon}
               />
             </TouchableOpacity>
           </View>
-        </Pressable>
-      </Modal>
+        </View>
 
-      {/* Language Modal */}
-      <Modal
-        transparent
-        animationType="fade"
-        visible={languageVisible}
-        onRequestClose={() => setLanguageVisible(false)}
-      >
-        <Pressable
-          style={styles.overlay}
-          onPress={() => setLanguageVisible(false)}
+        {/* Dropdown Menu */}
+        <Modal
+          transparent
+          animationType="fade"
+          visible={menuVisible}
+          onRequestClose={() => setMenuVisible(false)}
         >
-          <View
-            style={[
-              styles.menuContainer,
-              { backgroundColor: colors.menuBackground, maxHeight: 400 },
-            ]}
+          <Pressable
+            style={styles.overlay}
+            onPress={() => setMenuVisible(false)}
           >
-            <ScrollView>
-              {LANGUAGES.map((lang) => (
+            <View
+              style={[
+                styles.menuContainer,
+                { backgroundColor: colors.menuBackground },
+              ]}
+            >
+              <TouchableOpacity
+                style={styles.menuItem}
+                onPress={() => {
+                  toggleTheme();
+                  setMenuVisible(false);
+                }}
+              >
+                <MaterialCommunityIcons
+                  name={isDark ? "weather-sunny" : "weather-night"}
+                  size={20}
+                  color={colors.menuText}
+                  style={{ marginRight: 14 }}
+                />
+                <Text style={[styles.menuText, { color: colors.menuText }]}>
+                  {isDark ? "Day Mode" : "Night Mode"}
+                </Text>
+              </TouchableOpacity>
+
+              <View
+                style={{
+                  height: 1,
+                  backgroundColor: colors.divider,
+                  marginVertical: 4,
+                }}
+              />
+
+              <TouchableOpacity
+                style={styles.menuItem}
+                onPress={() => {
+                  setMenuVisible(false);
+                  setLanguageVisible(true);
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="translate"
+                  size={20}
+                  color={colors.menuText}
+                  style={{ marginRight: 14 }}
+                />
+                <Text
+                  style={[styles.menuText, { color: colors.menuText, flex: 1 }]}
+                >
+                  Lang ({selectedLanguage.code})
+                </Text>
+                <MaterialCommunityIcons
+                  name="chevron-right"
+                  size={20}
+                  color={colors.menuText}
+                />
+              </TouchableOpacity>
+            </View>
+          </Pressable>
+        </Modal>
+
+        {/* Language Modal */}
+        <Modal
+          transparent
+          animationType="fade"
+          visible={languageVisible}
+          onRequestClose={() => setLanguageVisible(false)}
+        >
+          <Pressable
+            style={styles.overlay}
+            onPress={() => setLanguageVisible(false)}
+          >
+            <View
+              style={[
+                styles.menuContainer,
+                { backgroundColor: colors.menuBackground, maxHeight: 400 },
+              ]}
+            >
+              <ScrollView>
+                {LANGUAGES.map((lang) => (
+                  <TouchableOpacity
+                    key={lang.code}
+                    style={styles.menuItem}
+                    onPress={() => {
+                      setSelectedLanguage(lang);
+                      setLanguageVisible(false);
+                    }}
+                  >
+                    <Text
+                      style={[
+                        styles.menuText,
+                        {
+                          color: colors.menuText,
+                          flex: 1,
+                          fontWeight:
+                            selectedLanguage.code === lang.code ? "600" : "400",
+                        },
+                      ]}
+                    >
+                      {lang.name}
+                    </Text>
+
+                    {selectedLanguage.code === lang.code && (
+                      <MaterialCommunityIcons
+                        name="check"
+                        size={20}
+                        color="#4CAF50"
+                      />
+                    )}
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            </View>
+          </Pressable>
+        </Modal>
+
+        {/* Emergency Modal */}
+        <Modal
+          transparent
+          animationType="fade"
+          visible={emergencyVisible}
+          onRequestClose={() => setEmergencyVisible(false)}
+        >
+          <Pressable
+            style={styles.overlay}
+            onPress={() => setEmergencyVisible(false)}
+          >
+            <View
+              style={[
+                styles.menuContainer,
+                { backgroundColor: colors.menuBackground, maxWidth: 300 },
+              ]}
+            >
+              {EMERGENCY_NUMBERS.map((item) => (
                 <TouchableOpacity
-                  key={lang.code}
+                  key={item.number}
                   style={styles.menuItem}
                   onPress={() => {
-                    setSelectedLanguage(lang);
-                    setLanguageVisible(false);
+                    setEmergencyVisible(false);
+                    Linking.openURL(`tel:${item.number}`);
                   }}
                 >
                   <Text
@@ -189,81 +263,28 @@ const AppNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
                       styles.menuText,
                       {
                         color: colors.menuText,
-                        flex: 1,
-                        fontWeight:
-                          selectedLanguage.code === lang.code ? "600" : "400",
+                        marginRight: 16,
                       },
                     ]}
                   >
-                    {lang.name}
+                    {item.label}
                   </Text>
 
-                  {selectedLanguage.code === lang.code && (
-                    <MaterialCommunityIcons
-                      name="check"
-                      size={20}
-                      color="#4CAF50"
-                    />
-                  )}
+                  <Text
+                    style={[
+                      styles.menuText,
+                      { color: "#E53935", fontWeight: "600" },
+                    ]}
+                  >
+                    {item.number}
+                  </Text>
                 </TouchableOpacity>
               ))}
-            </ScrollView>
-          </View>
-        </Pressable>
-      </Modal>
-
-      {/* Emergency Modal */}
-      <Modal
-        transparent
-        animationType="fade"
-        visible={emergencyVisible}
-        onRequestClose={() => setEmergencyVisible(false)}
-      >
-        <Pressable
-          style={styles.overlay}
-          onPress={() => setEmergencyVisible(false)}
-        >
-          <View
-            style={[
-              styles.menuContainer,
-              { backgroundColor: colors.menuBackground, maxWidth: 300 },
-            ]}
-          >
-            {EMERGENCY_NUMBERS.map((item) => (
-              <TouchableOpacity
-                key={item.number}
-                style={styles.menuItem}
-                onPress={() => {
-                  setEmergencyVisible(false);
-                  Linking.openURL(`tel:${item.number}`);
-                }}
-              >
-                <Text
-                  style={[
-                    styles.menuText,
-                    {
-                      color: colors.menuText,
-                      marginRight: 16,
-                    },
-                  ]}
-                >
-                  {item.label}
-                </Text>
-
-                <Text
-                  style={[
-                    styles.menuText,
-                    { color: "#E53935", fontWeight: "600" },
-                  ]}
-                >
-                  {item.number}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-        </Pressable>
-      </Modal>
-    </SafeAreaView>
+            </View>
+          </Pressable>
+        </Modal>
+      </BlurView>
+    </View>
   );
 };
 
@@ -296,12 +317,20 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   container: {
-    height: 56,
+    height: 60,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 16,
   },
+  darkGlass: {
+    backgroundColor: "#0F1419",
+  },
+
+  lightGlass: {
+    backgroundColor: "rgba(255,255,255,0.95)",
+  },
+
   title: {
     fontSize: 24,
     fontWeight: Platform.OS === "ios" ? "600" : "700",
@@ -349,8 +378,8 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 40,
-    height: 40,
+    width: 44,
+    height: 44,
     marginRight: 10,
   },
   rightSection: {
@@ -360,11 +389,30 @@ const styles = StyleSheet.create({
 
   emergencyButton: {
     // backgroundColor: "#E53935",
-    width: 36,
-    height: 36,
+    width: 40,
+    height: 40,
     borderRadius: 18,
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
+  },
+  logoLightContrast: {
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "rgba(0, 0, 0, 0.1)",
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  absoluteWrapper: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1000,
+  },
+  glassBackground: {
+    width: "100%",
   },
 });
