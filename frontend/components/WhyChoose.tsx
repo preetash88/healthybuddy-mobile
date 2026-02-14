@@ -17,6 +17,7 @@ import Animated, {
 } from "react-native-reanimated";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import SkeletonWhyChoose from "./skeletons/SkeletonWhyChoose";
+import { useTheme } from "../context/ThemeContext";
 
 const { width } = Dimensions.get("window");
 

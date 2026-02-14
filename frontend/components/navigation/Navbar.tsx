@@ -8,25 +8,43 @@ import {
   Pressable,
   Platform,
   Image,
+  ScrollView,
+  Linking,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useTheme } from "../../context/ThemeContext";
 
 type Props = {
   title?: string;
 };
 
-const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
-  const [isDark, setIsDark] = useState(true);
+const LANGUAGES = [
+  { name: "English", code: "EN" },
+  { name: "हिंदी", code: "HI" },
+  { name: "Odia", code: "OD" },
+];
+
+const EMERGENCY_NUMBERS = [
+  { label: "Ambulance", number: "102" },
+  { label: "Police", number: "100" },
+  { label: "Fire", number: "101" },
+  { label: "National Emergency", number: "112" },
+];
+
+const AppNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
+  const [languageVisible, setLanguageVisible] = useState(false);
+  const [emergencyVisible, setEmergencyVisible] = useState(false);
+
+  const defaultLanguage =
+    LANGUAGES.find((lang) => lang.code === "EN") || LANGUAGES[0];
+
+  const [selectedLanguage, setSelectedLanguage] = useState(defaultLanguage);
 
   const colors = isDark ? darkColors : lightColors;
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    setMenuVisible(false);
-  };
 
   return (
     <SafeAreaView
@@ -46,17 +64,29 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
           <Text style={[styles.title, { color: colors.title }]}>{title}</Text>
         </View>
 
-        <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() => setMenuVisible(true)}
-          style={styles.menuButton}
-        >
-          <MaterialCommunityIcons
-            name="dots-vertical"
-            size={24}
-            color={colors.icon}
-          />
-        </TouchableOpacity>
+        <View style={styles.rightSection}>
+          {/* Emergency Button */}
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.emergencyButton}
+            onPress={() => setEmergencyVisible(true)}
+          >
+            <MaterialCommunityIcons name="phone" size={20} color="#f20f0f" />
+          </TouchableOpacity>
+
+          {/* Three Dots */}
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setMenuVisible(true)}
+            style={styles.menuButton}
+          >
+            <MaterialCommunityIcons
+              name="dots-vertical"
+              size={24}
+              color={colors.icon}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Dropdown Menu */}
@@ -73,7 +103,13 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
               { backgroundColor: colors.menuBackground },
             ]}
           >
-            <TouchableOpacity style={styles.menuItem} onPress={toggleTheme}>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                toggleTheme();
+                setMenuVisible(false);
+              }}
+            >
               <MaterialCommunityIcons
                 name={isDark ? "weather-sunny" : "weather-night"}
                 size={20}
@@ -84,6 +120,7 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
                 {isDark ? "Day Mode" : "Night Mode"}
               </Text>
             </TouchableOpacity>
+
             <View
               style={{
                 height: 1,
@@ -91,6 +128,138 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
                 marginVertical: 4,
               }}
             />
+
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                setMenuVisible(false);
+                setLanguageVisible(true);
+              }}
+            >
+              <MaterialCommunityIcons
+                name="translate"
+                size={20}
+                color={colors.menuText}
+                style={{ marginRight: 14 }}
+              />
+              <Text
+                style={[styles.menuText, { color: colors.menuText, flex: 1 }]}
+              >
+                Lang ({selectedLanguage.code})
+              </Text>
+              <MaterialCommunityIcons
+                name="chevron-right"
+                size={20}
+                color={colors.menuText}
+              />
+            </TouchableOpacity>
+          </View>
+        </Pressable>
+      </Modal>
+
+      {/* Language Modal */}
+      <Modal
+        transparent
+        animationType="fade"
+        visible={languageVisible}
+        onRequestClose={() => setLanguageVisible(false)}
+      >
+        <Pressable
+          style={styles.overlay}
+          onPress={() => setLanguageVisible(false)}
+        >
+          <View
+            style={[
+              styles.menuContainer,
+              { backgroundColor: colors.menuBackground, maxHeight: 400 },
+            ]}
+          >
+            <ScrollView>
+              {LANGUAGES.map((lang) => (
+                <TouchableOpacity
+                  key={lang.code}
+                  style={styles.menuItem}
+                  onPress={() => {
+                    setSelectedLanguage(lang);
+                    setLanguageVisible(false);
+                  }}
+                >
+                  <Text
+                    style={[
+                      styles.menuText,
+                      {
+                        color: colors.menuText,
+                        flex: 1,
+                        fontWeight:
+                          selectedLanguage.code === lang.code ? "600" : "400",
+                      },
+                    ]}
+                  >
+                    {lang.name}
+                  </Text>
+
+                  {selectedLanguage.code === lang.code && (
+                    <MaterialCommunityIcons
+                      name="check"
+                      size={20}
+                      color="#4CAF50"
+                    />
+                  )}
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+          </View>
+        </Pressable>
+      </Modal>
+
+      {/* Emergency Modal */}
+      <Modal
+        transparent
+        animationType="fade"
+        visible={emergencyVisible}
+        onRequestClose={() => setEmergencyVisible(false)}
+      >
+        <Pressable
+          style={styles.overlay}
+          onPress={() => setEmergencyVisible(false)}
+        >
+          <View
+            style={[
+              styles.menuContainer,
+              { backgroundColor: colors.menuBackground, maxWidth: 300 },
+            ]}
+          >
+            {EMERGENCY_NUMBERS.map((item) => (
+              <TouchableOpacity
+                key={item.number}
+                style={styles.menuItem}
+                onPress={() => {
+                  setEmergencyVisible(false);
+                  Linking.openURL(`tel:${item.number}`);
+                }}
+              >
+                <Text
+                  style={[
+                    styles.menuText,
+                    {
+                      color: colors.menuText,
+                      marginRight: 16,
+                    },
+                  ]}
+                >
+                  {item.label}
+                </Text>
+
+                <Text
+                  style={[
+                    styles.menuText,
+                    { color: "#E53935", fontWeight: "600" },
+                  ]}
+                >
+                  {item.number}
+                </Text>
+              </TouchableOpacity>
+            ))}
           </View>
         </Pressable>
       </Modal>
@@ -98,7 +267,7 @@ const TelegramNavbar: React.FC<Props> = ({ title = "Rurivia.AI" }) => {
   );
 };
 
-export default TelegramNavbar;
+export default AppNavbar;
 
 /* ---------------- COLORS ---------------- */
 
@@ -153,8 +322,9 @@ const styles = StyleSheet.create({
   menuContainer: {
     marginTop: 10, // exactly header height
     marginRight: 12,
-    width: 150, // Telegram width
-    borderRadius: 12, // Telegram rounded
+    minWidth: 160, // minimum size
+    maxWidth: 400, // prevents over-expansion
+    borderRadius: 12,
     paddingVertical: 4,
     elevation: 12,
     shadowColor: "#000",
@@ -167,6 +337,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 14,
     paddingHorizontal: 18,
+    justifyContent: "space-between",
   },
   menuText: {
     fontSize: 16,
@@ -180,6 +351,20 @@ const styles = StyleSheet.create({
   logo: {
     width: 28,
     height: 28,
+    marginRight: 10,
+  },
+  rightSection: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  emergencyButton: {
+    // backgroundColor: "#E53935",
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
     marginRight: 10,
   },
 });
